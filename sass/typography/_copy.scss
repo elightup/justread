@@ -1,17 +1,46 @@
 p {
-	margin-bottom: 1.5em;
-}
+	margin: 0 0 1.6em;
 
-dfn, cite, em, i {
-	font-style: italic;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 blockquote {
-	margin: 0 1.5em;
+	font-size: 1.2em;
+	font-style: italic;
+	border-top: 4px solid currentColor;
+	padding: 1em 0 0 2.5em;
+	margin: 0 0 1.6em;
+	position: relative;
+
+	&:before {
+		content: "\201C";
+		position: absolute;
+		left: 0;
+		top: .06em;
+		font-size: 3em;
+		font-style: normal;
+	}
+
+	cite {
+		display: block;
+		margin-top: .8em;
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-family: $font__sans-serif;
+		font-style: normal;
+		color: $color__silver;
+
+		&:before {
+			content: '\2014';
+			margin-right: .5rem;
+		}
+	}
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.6em;
 }
 
 pre {
@@ -23,6 +52,21 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	color: #e3e6e8;
+
+	.entry-content & {
+		margin: 0 -2rem 1.6em;
+		padding: 2rem 2rem;
+
+		@media (min-width: 768px) {
+			margin: 0 -4rem 1.6em;
+			padding: 2rem 4rem;
+		}
+		@media (min-width: 1024px) {
+			margin: 0 -8rem 1.6em;
+			padding: 2rem 8rem;
+		}
+	}
 }
 
 code, kbd, tt, var {

@@ -258,41 +258,98 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+body {
+	color: #263238;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: #0f161a;
+	line-height: 1.25;
 	clear: both;
+	margin: 1.5em 0 .5em;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 2.4em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1em;
+	text-trasform: uppercase;
+}
+
+h5 {
+	font-size: .8em;
+}
+
+h6 {
+	font-size: .7em;
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.6em;
 }
 
-dfn, cite, em, i {
-	font-style: italic;
+p:last-child {
+	margin-bottom: 0;
 }
 
 blockquote {
-	margin: 0 1.5em;
+	font-size: 1.2em;
+	font-style: italic;
+	border-top: 4px solid currentColor;
+	padding: 1em 0 0 2.5em;
+	margin: 0 0 1.6em;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	position: absolute;
+	left: 0;
+	top: .06em;
+	font-size: 3em;
+	font-style: normal;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: .8em;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-style: normal;
+	color: #6f8590;
+}
+
+blockquote cite:before {
+	content: '\2014';
+	margin-right: .5rem;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.6em;
 }
 
 pre {
-	background: #eee;
+	background: #263238;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -301,6 +358,26 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	color: #e3e6e8;
+}
+
+.entry-content pre {
+	margin: 0 -2rem 1.6em;
+	padding: 2rem 2rem;
+}
+
+@media (min-width: 768px) {
+	.entry-content pre {
+		margin: 0 -4rem 1.6em;
+		padding: 2rem 4rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.entry-content pre {
+		margin: 0 -8rem 1.6em;
+		padding: 2rem 8rem;
+	}
 }
 
 code, kbd, tt, var {
@@ -338,12 +415,12 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #f5f7f8;
 	/* Fallback for when there is no custom background color defined. */
 }
 
 hr {
-	background-color: #ccc;
+	background-color: rgba(38, 50, 56, 0.1);
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -383,7 +460,7 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 1.6em 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -395,36 +472,37 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.button, .posts-navigation a,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	display: inline-block;
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	border-color: #06c;
+	border-radius: 4em;
+	background: #06c;
+	color: #fff;
+	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: 12px 20px;
+	transition: opacity .2s;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
+.button:hover, .posts-navigation a:hover,
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	opacity: .8;
 }
 
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+.button:hover, .posts-navigation a:hover {
+	text-decoration: none;
 }
 
 input[type="text"],
@@ -444,9 +522,10 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
+	border: 1px solid rgba(38, 50, 56, 0.1);
+	border-radius: 2px;
+	padding: 4px 8px;
+	line-height: 1.6;
 }
 
 input[type="text"]:focus,
@@ -468,8 +547,12 @@ textarea:focus {
 	color: #111;
 }
 
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
 select {
-	border: 1px solid #ccc;
+	border: 1px solid rgba(38, 50, 56, 0.1);
 }
 
 textarea {
@@ -483,7 +566,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #06c;
 }
 
 a:visited {
@@ -506,10 +589,11 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
+	letter-spacing: 1px;
+	font-weight: bold;
 }
 
 .main-navigation ul {
@@ -520,31 +604,71 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
 	float: left;
 	position: absolute;
-	top: 100%;
-	left: -999em;
+	top: 101%;
+	left: 0;
 	z-index: 99999;
+	background: #fff;
+	width: 200px;
+	transform: translate3d(0, 10px, 0);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
+	left: 100%;
 	top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
+.main-navigation ul ul li {
+	width: 100%;
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+}
+
+.main-navigation ul ul li:first-child > a {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.main-navigation ul ul li:last-child > a {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.main-navigation .menu-item-has-children > a::after,
+.main-navigation .page_item_has_children > a::after {
+	content: "";
+	display: block;
+	border: .25rem solid transparent;
+	border-top-color: currentColor;
+	position: absolute;
+	z-index: 1001;
+	right: .375rem;
+	top: 50%;
+	margin-top: -.125rem;
+}
+
+.main-navigation li .menu-item-has-children > a::after,
+.main-navigation li .page_item_has_children > a::after {
+	border-top-color: transparent;
+	border-left-color: currentColor;
+	right: .75rem;
+	margin-top: -.25rem;
 }
 
 .main-navigation li {
@@ -552,18 +676,99 @@ a:hover, a:active {
 	position: relative;
 }
 
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+	color: #06c;
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: 2rem 1rem;
+	color: #263238;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	color: #06c;
+}
+
+.menu-toggle {
+	color: inherit;
+	text-indent: -999em;
+	margin: 1.5rem 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0 0 0 1.5rem;
+	background: transparent;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.menu-toggle:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0.25rem;
+	display: block;
+	border-top: 0.75rem double #0f161a;
+	border-bottom: 0.25rem solid #0f161a;
+	transition: all .5s;
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.main-navigation.toggled .menu {
+	position: absolute;
+	right: 0;
+	top: 101%;
 }
 
-@media screen and (min-width: 37.5em) {
+.main-navigation.toggled ul {
+	display: block;
+	background: #fff;
+	min-width: 256px;
+	box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
+}
+
+.main-navigation.toggled ul ul {
+	visibility: visible;
+	opacity: 1;
+	position: static;
+	float: none;
+	transform: none;
+	box-shadow: none;
+}
+
+.main-navigation.toggled ul ul a {
+	padding-left: 2rem;
+}
+
+.main-navigation.toggled ul ul ul a {
+	padding-left: 4rem;
+}
+
+.main-navigation.toggled li {
+	float: none;
+}
+
+.main-navigation.toggled a {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+}
+
+.main-navigation.toggled .menu-item-has-children > a:after,
+.main-navigation.toggled .page_item_has_children > a:after {
+	display: none;
+}
+
+@media (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -572,26 +777,69 @@ a:hover, a:active {
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
+.comment-navigation,
+.posts-navigation {
 	overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.posts-navigation .nav-previous {
 	float: left;
-	width: 50%;
 }
 
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.posts-navigation .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+}
+
+/* Posts archive navigation */
+.posts-navigation .nav-previous a:before {
+	margin-right: .25rem;
+	content: "\2190";
+}
+
+.posts-navigation .nav-next a:after {
+	margin-left: .25rem;
+	content: "\2192";
+}
+
+/* Single post navigation */
+.post-navigation {
+	margin-top: 1.5rem;
+}
+
+.post-navigation .nav-links {
+	display: flex;
+	justify-content: center;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+
+.adjacent {
+	max-width: 50%;
+	padding: 1.5rem;
+}
+
+.adjacent__inner {
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
+	box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
+	position: relative;
+	transition: all .3s;
+	top: 0;
+}
+
+.adjacent__inner:hover {
+	box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
+	top: -4px;
+}
+
+.size-justread-adjacent {
+	display: block;
+	width: 100%;
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
 }
 
 /*--------------------------------------------------------------
@@ -700,6 +948,52 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* Header */
+.site-header {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+	padding: 0 1.5em;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+.site-branding {
+	margin-right: 1em;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.25;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: #0f161a;
+}
+
+.site-description {
+	display: none;
+}
+
+.site-header .search-submit {
+	display: none;
+}
+
+.site-header .search-field {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

@@ -1,5 +1,44 @@
-// @import "../layout/content-sidebar";
-// @import "../layout/sidebar-content";
+/* Header */
+.site-header {
+	font-family: $font__sans-serif;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	border-bottom: 1px solid $color__line;
+	padding: 0 1.5em;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+.site-branding {
+	margin-right: 1em;
+}
+.site-title {
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.25;
+
+	a {
+		text-decoration: none;
+		color: $color__headings;
+	}
+}
+.site-description {
+	display: none;
+}
+.site-header {
+	.search-submit {
+		display: none;
+	}
+	.search-field {
+		@include font-size(.875);
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
