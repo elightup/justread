@@ -267,7 +267,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	color: #0f161a;
 	line-height: 1.25;
 	clear: both;
@@ -334,7 +334,7 @@ blockquote cite {
 	margin-top: .8em;
 	font-size: 1rem;
 	text-transform: uppercase;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	font-style: normal;
 	color: #6f8590;
 }
@@ -351,33 +351,12 @@ address {
 pre {
 	background: #263238;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: .8em;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
-	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 2em;
 	color: #e3e6e8;
-}
-
-.entry-content pre {
-	margin: 0 -2rem 1.6em;
-	padding: 2rem 2rem;
-}
-
-@media (min-width: 768px) {
-	.entry-content pre {
-		margin: 0 -4rem 1.6em;
-		padding: 2rem 4rem;
-	}
-}
-
-@media (min-width: 1024px) {
-	.entry-content pre {
-		margin: 0 -8rem 1.6em;
-		padding: 2rem 8rem;
-	}
 }
 
 code, kbd, tt, var {
@@ -427,21 +406,12 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
+	margin: 0 0 1.6em;
 }
 
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
 }
 
 dt {
@@ -449,7 +419,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5em 1.6em;
 }
 
 img {
@@ -465,8 +435,37 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.6em;
 	width: 100%;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+th, td {
+	padding: .5rem .75rem;
+}
+
+th:first-child, td:first-child {
+	padding-left: 0;
+}
+
+th:last-child, td:last-child {
+	padding-right: 0;
+}
+
+tr {
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+}
+
+thead tr {
+	border-width: .25rem;
+}
+
+thead th {
+	text-transform: uppercase;
+	text-align: left;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-size: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -486,9 +485,9 @@ input[type="submit"] {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1;
-	padding: 12px 20px;
+	padding: .75rem 1.25rem;
 	transition: opacity .2s;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -524,8 +523,10 @@ textarea {
 	color: #666;
 	border: 1px solid rgba(38, 50, 56, 0.1);
 	border-radius: 2px;
-	padding: 4px 8px;
-	line-height: 1.6;
+	padding: .6875rem 1rem;
+	line-height: 1;
+	font-size: 16px;
+	font-size: 1rem;
 }
 
 input[type="text"]:focus,
@@ -553,10 +554,12 @@ input[type="search"] {
 
 select {
 	border: 1px solid rgba(38, 50, 56, 0.1);
+	padding: .4rem .5rem;
 }
 
 textarea {
 	width: 100%;
+	line-height: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -567,32 +570,22 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: #06c;
+	text-decoration: none;
 }
 
-a:visited {
-	color: purple;
-}
-
-a:hover, a:focus, a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover, a:active {
-	outline: 0;
+a:hover {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/* Main navigation */
 .main-navigation {
 	text-transform: uppercase;
-	font-size: 14px;
-	font-size: 0.875rem;
-	letter-spacing: 1px;
+	font-size: 12px;
+	font-size: 0.75rem;
+	letter-spacing: .1em;
 	font-weight: bold;
 }
 
@@ -794,6 +787,10 @@ a:hover, a:active {
 }
 
 /* Posts archive navigation */
+.posts-navigation {
+	clear: both;
+}
+
 .posts-navigation .nav-previous a:before {
 	margin-right: .25rem;
 	content: "\2190";
@@ -817,29 +814,9 @@ a:hover, a:active {
 }
 
 .adjacent {
+	display: flex;
 	max-width: 50%;
 	padding: 1.5rem;
-}
-
-.adjacent__inner {
-	border-top-left-radius: .25rem;
-	border-top-right-radius: .25rem;
-	box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
-	position: relative;
-	transition: all .3s;
-	top: 0;
-}
-
-.adjacent__inner:hover {
-	box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
-	top: -4px;
-}
-
-.size-justread-adjacent {
-	display: block;
-	width: 100%;
-	border-top-left-radius: .25rem;
-	border-top-right-radius: .25rem;
 }
 
 /*--------------------------------------------------------------
@@ -950,13 +927,24 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* Header */
 .site-header {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background: #fff;
 	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
-	padding: 0 1.5em;
+	padding: 0 3rem;
+	margin-bottom: 4rem;
+}
+
+.site-header .search-submit {
+	display: none;
+}
+
+.site-header .search-field {
+	font-size: 12px;
+	font-size: 0.75rem;
+	width: 20em;
 }
 
 .navbar {
@@ -985,50 +973,407 @@ a:hover, a:active {
 	display: none;
 }
 
-.site-header .search-submit {
-	display: none;
-}
-
-.site-header .search-field {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky {
-	display: block;
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
+/* Card */
+.card {
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
+	background: #fff;
+}
+
+.card__body {
+	padding: 1rem 2rem 2rem;
+}
+
+.card__subtitle {
+	font-size: 12px;
+	font-size: 0.75rem;
+	color: #6f8590;
+	text-transform: uppercase;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+.card__title {
+	font-size: 1.2em;
+	margin: 0 0 8px;
+	word-wrap: break-word;
+}
+
+.card__title a {
+	color: inherit;
+}
+
+.card__content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.card__media img {
+	display: block;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+}
+
+.card__footer {
+	font-size: 12px;
+	font-size: 0.75rem;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-weight: bold;
+	margin: 1.6rem 0 -1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__footer img {
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.card__footer a {
+	color: #6f8590;
+}
+
+/* Archive page */
+.hfeed .site-main {
+	padding: 0 1.5rem;
+	margin: 0 auto;
+	max-width: 1280px;
+	overflow: hidden;
+}
+
+.hfeed .hentry {
+	width: 33.33%;
+	padding: 1.5rem;
+	float: left;
 }
 
 .updated:not(.published) {
 	display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+}
+
+/* Single posts and pages */
+.page .site-content,
+.single .site-content {
+	width: 58.5rem;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.page .hentry,
+.single .hentry {
+	padding: 0;
+}
+
+.page .entry-header,
+.single .entry-header {
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+.page .entry-title,
+.single .entry-title {
+	margin: 0 0 8px;
+}
+
+.page .entry-meta,
+.single .entry-meta {
+	font-weight: bold;
+	font-size: 12px;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #6f8590;
+}
+
+.page .entry-meta a,
+.single .entry-meta a {
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	color: #6f8590;
+}
+
+.page .entry-meta .on,
+.single .entry-meta .on {
+	font-style: italic;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 5px;
+}
+
+.page .entry-meta .dash,
+.single .entry-meta .dash {
+	margin: 0 5px;
+}
+
+.page .entry-meta .avatar,
+.single .entry-meta .avatar {
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.page .entry-body,
+.single .entry-body {
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 7px 50px 0 rgba(38, 50, 56, 0.07);
+	padding: 2rem;
+}
+
+.page .entry-content > p:first-child,
+.single .entry-content > p:first-child {
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+	color: #6f8590;
+}
+
+.page .entry-content pre,
+.single .entry-content pre {
+	margin-left: -2rem;
+	margin-right: -2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+	.page .entry-body,
+	.single .entry-body {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+	.page .entry-content pre,
+	.single .entry-content pre {
+		margin-left: -4rem;
+		margin-right: -4rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.page .entry-body,
+	.single .entry-body {
+		padding: 4rem 8rem;
+	}
+	.page .entry-content pre,
+	.single .entry-content pre {
+		margin-left: -8rem;
+		margin-right: -8rem;
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+}
+
+.entry-footer {
+	margin-top: 2em;
+	overflow: hidden;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.cat-links,
+.tags-links {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.cat-links__title,
+.tags-links__title {
+	text-transform: uppercase;
+	display: block;
+	color: #6f8590;
+	font-size: 12px;
+	font-size: 0.75rem;
+	margin-bottom: 1em;
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+}
+
+.cat-links {
+	padding-right: 20px;
+}
+
+.tags-links {
+	padding-left: 20px;
+}
+
+.tags-links a {
+	display: inline-block;
+	border: 1px solid #6f8590;
+	color: #6f8590;
+	padding: .2em 1em;
+	border-radius: 99px;
+	transition: all .2s;
+	margin: 0 .25rem .25rem 0;
+}
+
+.tags-links a:hover {
+	background: #6f8590;
+	color: #fff;
+	text-decoration: none;
+}
+
+.entry-footer .edit-link {
+	display: inline-block;
+	margin-top: 2rem;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-footer .edit-link a {
+	color: #6f8590;
 }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	font-size: 16px;
+	font-size: 1rem;
+	width: 34em;
+	margin: 4rem auto 0;
+}
+
+.comments-title {
+	font-size: 16px;
+	font-size: 1rem;
+	color: #6f8590;
+	margin: 0 0 2rem;
+	text-align: center;
+}
+
+.comment-list {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 4rem;
+}
+
+.comment-list .comment-respond {
+	margin-bottom: 1.6rem;
+}
+
+.comment > .children {
+	padding-left: 1.6rem;
+	list-style: none;
+}
+
+.comment-body {
+	padding: 27.6px 1.6rem 1.6rem;
+	border-radius: .25rem;
+	background: #fff;
+	margin-bottom: 1.6rem;
+}
+
+.comment-meta {
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	margin-bottom: 1.6em;
+}
+
+.comment-author {
+	font-size: 1rem;
+	line-height: 1.25;
+}
+
+.comment-author .avatar {
+	border-radius: 100%;
+	margin-right: 8px;
+	float: left;
+	margin-top: -2px;
+}
+
+.says {
+	display: none;
+}
+
+.comment-metadata {
+	font-size: .75rem;
+	margin-left: 48px;
+}
+
+.comment-metadata a {
+	color: #6f8590;
+}
+
+.comment-metadata .edit-link {
+	margin-left: .25rem;
+}
+
+.reply {
+	display: inline-block;
+	margin-top: 1.6rem;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+.reply a {
+	color: #6f8590;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
 .bypostauthor {
 	display: block;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	display: flex;
+	align-items: center;
+}
+
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label {
+	order: 2;
+	margin-left: 1em;
+}
+
+.required {
+	color: #e7040f;
+}
+
+.no-comments {
+	text-align: center;
+}
+
+/* Footer */
+.site-footer {
+	background: #fff;
+	font-size: 12px;
+	font-size: 0.75rem;
+	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	padding: 2rem;
+	margin-top: 8rem;
+	text-align: center;
+	border-top: 1px solid rgba(38, 50, 56, 0.1);
+	color: #6f8590;
+}
+
+.site-footer a {
+	color: #6f8590;
 }
 
 /*--------------------------------------------------------------

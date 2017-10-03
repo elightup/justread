@@ -17,8 +17,9 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 2px;
-	padding: 4px 8px;
-	line-height: 1.6;
+	padding: .6875rem 1rem;
+	line-height: 1;
+	@include font-size(1);
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -30,8 +31,10 @@ input[type="search"] {
 
 select {
 	border: 1px solid $color__border-input;
+	padding: .4rem .5rem;
 }
 
 textarea {
 	width: 100%;
+	line-height: inherit;
 }

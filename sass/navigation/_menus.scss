@@ -1,7 +1,8 @@
+/* Main navigation */
 .main-navigation {
 	text-transform: uppercase;
-	@include font-size(.875);
-	letter-spacing: 1px;
+	@include font-size(.75);
+	letter-spacing: .1em;
 	font-weight: bold;
 
 	ul {
@@ -208,6 +209,8 @@
 
 /* Posts archive navigation */
 .posts-navigation {
+	clear: both;
+
 	a {
 		@extend .button;
 	}
@@ -234,25 +237,7 @@
 	}
 }
 .adjacent {
+	display: flex;
 	max-width: 50%;
 	padding: 1.5rem;
-}
-.adjacent__inner {
-	border-top-left-radius: .25rem;
-	border-top-right-radius: .25rem;
-	box-shadow: 0 2px 4px rgba(38, 50, 56, .05);
-	position: relative;
-	transition: all .3s;
-	top: 0;
-
-	&:hover {
-		box-shadow: 0 4px 8px rgba(38, 50, 56, .1);
-		top: -4px;
-	}
-}
-.size-justread-adjacent {
-	display: block;
-	width: 100%;
-	border-top-left-radius: .25rem;
-	border-top-right-radius: .25rem;
 }

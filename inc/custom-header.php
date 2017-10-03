@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Just_Read
+ * @package Justread
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses justread2_header_style()
+ * @uses justread_header_style()
  */
-function justread2_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'justread2_custom_header_args', array(
+function justread_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'justread_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'justread2_header_style',
+		'wp-head-callback'       => 'justread_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'justread2_custom_header_setup' );
+add_action( 'after_setup_theme', 'justread_custom_header_setup' );
 
-if ( ! function_exists( 'justread2_header_style' ) ) :
+if ( ! function_exists( 'justread_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see justread2_custom_header_setup().
+	 * @see justread_custom_header_setup().
 	 */
-	function justread2_header_style() {
+	function justread_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

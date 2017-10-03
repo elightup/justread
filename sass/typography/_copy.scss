@@ -46,32 +46,17 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	font-size: .8em;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
-	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 2em;
 	color: #e3e6e8;
-
-	.entry-content & {
-		margin: 0 -2rem 1.6em;
-		padding: 2rem 2rem;
-
-		@media (min-width: 768px) {
-			margin: 0 -4rem 1.6em;
-			padding: 2rem 4rem;
-		}
-		@media (min-width: 1024px) {
-			margin: 0 -8rem 1.6em;
-			padding: 2rem 8rem;
-		}
-	}
 }
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(0.9375);
+	@include font-size(.9375);
 }
 
 abbr, acronym {

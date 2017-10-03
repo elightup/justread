@@ -11,7 +11,7 @@ input[type="submit"] {
 	color: #fff;
 	@include font-size(.875);
 	line-height: 1;
-	padding: 12px 20px;
+	padding: .75rem 1.25rem;
 	transition: opacity .2s;
 	font-family: $font__sans-serif;
 	font-weight: bold;

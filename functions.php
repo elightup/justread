@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Just_Read
+ * @package Justread
  */
 
-if ( ! function_exists( 'justread2_setup' ) ) :
+if ( ! function_exists( 'justread_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'justread2_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function justread2_setup() {
+	function justread_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -60,7 +60,7 @@ if ( ! function_exists( 'justread2_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'justread2_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'justread_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +81,7 @@ if ( ! function_exists( 'justread2_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'justread2_setup' );
+add_action( 'after_setup_theme', 'justread_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,17 +90,17 @@ add_action( 'after_setup_theme', 'justread2_setup' );
  *
  * @global int $content_width
  */
-function justread2_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'justread2_content_width', 640 );
+function justread_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'justread_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'justread2_content_width', 0 );
+add_action( 'after_setup_theme', 'justread_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function justread2_widgets_init() {
+function justread_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'justread2' ),
 		'id'            => 'sidebar-1',
@@ -111,12 +111,12 @@ function justread2_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'justread2_widgets_init' );
+add_action( 'widgets_init', 'justread_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function justread2_scripts() {
+function justread_scripts() {
 	wp_enqueue_style( 'justread2-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'justread2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -127,7 +127,7 @@ function justread2_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'justread2_scripts' );
+add_action( 'wp_enqueue_scripts', 'justread_scripts' );
 
 /**
  * Implement the Custom Header feature.
