@@ -16,14 +16,10 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: 2px;
+	border-radius: 3px;
 	padding: .6875rem 1rem;
 	line-height: 1;
 	@include font-size(1);
-
-	&:focus {
-		color: $color__text-input-focus;
-	}
 }
 input[type="search"] {
 	-webkit-appearance: textfield;

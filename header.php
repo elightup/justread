@@ -24,6 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'justread2' ); ?></a>
 
+	<?php get_search_form(); ?>
+
 	<header id="masthead" class="site-header">
 		<div class="navbar">
 			<div class="site-branding">
@@ -44,18 +46,21 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread2' ); ?></button>
 				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu',
-						'container'      => '',
-					) );
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'menu_class'     => 'menu',
+					'container'      => '',
+				) );
 				?>
 			</nav><!-- #site-navigation -->
 		</div>
-		<?php get_search_form(); ?>
+		<div class="social-icons">
+			<?php if ( function_exists( 'jetpack_social_menu' ) ) jetpack_social_menu(); ?>
+			<?php echo justread_get_svg ( array( 'icon' => 'search' ) ); ?>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread2' ); ?></button>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

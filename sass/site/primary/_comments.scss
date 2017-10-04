@@ -1,6 +1,8 @@
 .comments-area {
 	@include font-size(1);
-	width: 34em;
+	width: 36em;
+	max-width: 100%;
+	padding: 2em;
 	margin: 4rem auto 0;
 }
 .comments-title {
@@ -77,11 +79,16 @@
 .comment-form-email,
 .comment-form-url {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 
-	label {
-		order: 2;
-		margin-left: 1em;
+	@media (min-width: 768px) {
+		flex-direction: row;
+		align-items: center;
+
+		label {
+			order: 2;
+			margin-left: 1em;
+		}
 	}
 }
 .required {
@@ -89,4 +96,8 @@
 }
 .no-comments {
 	text-align: center;
+	font-family: $font__sans-serif;
+	@include font-size(.875);
+	font-weight: bold;
+	color: $color__silver;
 }

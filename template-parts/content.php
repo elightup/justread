@@ -11,6 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="card">
+		<?php if ( is_sticky() ) : ?>
+			<?php echo justread_get_svg ( array( 'icon' => 'bookmark' ) ); ?>
+		<?php endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a class="card__media" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php the_post_thumbnail( 'justread-adjacent' ); ?>
@@ -23,7 +26,7 @@
 					$category = get_the_category();
 					$category = reset( $category );
 					?>
-					<a class="card__subtitle" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><svg class="icon icon-bookmark, ribbon"><use xlink:href="#icon-bookmark, ribbon"></use></svg> <?php echo esc_html( $category->name ); ?></a>
+					<a class="card__subtitle" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
 				<?php endif; ?>
 				<?php the_title( '<h2 class="entry-title card__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			</header><!-- .entry-header -->

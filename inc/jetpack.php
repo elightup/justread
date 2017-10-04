@@ -28,7 +28,7 @@ function justread_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'justread2-style',
+			'stylesheet' => 'justread-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -36,6 +36,9 @@ function justread_jetpack_setup() {
 			'comment'    => '.comments-link',
 		),
 	) );
+
+	// Add theme support for Social Menu.
+	add_theme_support( 'jetpack-social-menu', 'svg' );
 }
 add_action( 'after_setup_theme', 'justread_jetpack_setup' );
 

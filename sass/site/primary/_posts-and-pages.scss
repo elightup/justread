@@ -1,3 +1,7 @@
+.site-content {
+	max-width: 100%;
+	margin: 0 auto;
+}
 .icon {
 	display: inline-block;
 	width: 1em;
@@ -6,11 +10,13 @@
 	stroke: currentColor;
 	fill: currentColor;
 }
+
 /* Card */
 .card {
 	border-radius: 4px;
 	box-shadow: 0 2px 4px rgba(38, 50, 56, .05);
 	background: #fff;
+	position: relative;
 
 	&__body {
 		padding: 1rem 2rem 2rem;
@@ -53,24 +59,69 @@
 			border-radius: 50%;
 		}
 		a {
-			color: $color__silver;
+			color: $color__link;
 		}
 	}
+	a:hover {
+		color: $color__link;
+		text-decoration: none;
+	}
+}
+.icon-bookmark {
+	display: none;
+}
+.sticky .icon-bookmark {
+	display: inline-block;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
 }
 
 /* Archive page */
 .hfeed {
-	.site-main {
-		padding: 0 1.5rem;
-		margin: 0 auto;
+	.site-content {
 		max-width: 1280px;
-		overflow: hidden;
+	}
+	.site-main {
+		padding: 0 .5rem;
+
+		@media (min-width: 768px) {
+			padding: 0 1.5rem;
+			column-gap: 0;
+			column-count: 2;
+		}
+		@media (min-width: 1024px) {
+			column-count: 3;
+		}
+	}
+	&.error404 {
+		.site-content {
+			max-width: 58.5rem;
+		}
+		.site-main {
+			column-count: 1;
+		}
 	}
 	.hentry {
-		width: 33.33%;
-		padding: 1.5rem;
-		float: left;
+		padding: .5rem;
+		break-inside: avoid;
+		page-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+
+		@media (min-width: 768px) {
+			padding: 1.5rem;
+		}
 	}
+}
+.page-header {
+	margin: 3rem;
+	padding: 2rem;
+	background: #d6dde1;
+	border-radius: 4px;
+}
+.page-title {
+	font-size: 1.2em;
+	margin: 0;
 }
 .updated:not(.published) {
 	display: none;
@@ -85,8 +136,6 @@
 .single {
 	.site-content {
 		width: 58.5rem;
-		max-width: 100%;
-		margin: 0 auto;
 	}
 	.hentry {
 		padding: 0;
@@ -198,15 +247,15 @@
 
 	a {
 		display: inline-block;
-		border: 1px solid $color__silver;
-		color: $color__silver;
+		border: 1px solid $color__link;
+		color: $color__link;
 		padding: .2em 1em;
 		border-radius: 99px;
 		transition: all .2s;
 		margin: 0 .25rem .25rem 0;
 
 		&:hover {
-			background: $color__silver;
+			background: $color__link;
 			color: #fff;
 			text-decoration: none;
 		}
@@ -223,4 +272,3 @@
 		color: $color__silver;
 	}
 }
-
