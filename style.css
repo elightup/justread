@@ -653,21 +653,30 @@ a:hover {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
-	color: #06c;
+	color: inherit;
+	border-color: #06c;
+}
+
+.main-navigation li li:hover > a,
+.main-navigation li li.focus > a {
+	color: inherit;
+	border-color: rgba(38, 50, 56, 0.1);
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: 2rem 1rem;
-	color: inherit;
+	padding: 24px 16px 21px;
+	color: #586674;
+	border-bottom: 3px solid transparent;
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	color: #06c;
+	color: inherit;
+	border-color: #06c;
 }
 
 .menu-toggle {
@@ -730,6 +739,10 @@ a:hover {
 
 .main-navigation.toggled li {
 	float: none;
+}
+
+.main-navigation.toggled li:hover a {
+	border-color: rgba(38, 50, 56, 0.1);
 }
 
 .main-navigation.toggled a {
@@ -1149,7 +1162,6 @@ a:hover {
 	font-size: 12px;
 	font-size: 0.75rem;
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
-	font-weight: bold;
 	margin: 1.6rem 0 -1rem;
 	display: flex;
 	justify-content: space-between;
@@ -1162,7 +1174,7 @@ a:hover {
 }
 
 .card__footer a {
-	color: #06c;
+	color: #6f8590;
 }
 
 .card a:hover {

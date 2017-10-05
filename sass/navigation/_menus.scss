@@ -91,22 +91,32 @@
 
 		&:hover > a,
 		&.focus > a {
-			color: $color__link;
+			color: inherit;
+			border-color: $color__link;
+		}
+	}
+	li li {
+		&:hover > a,
+		&.focus > a {
+			color: inherit;
+			border-color: $color__line;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 2rem 1rem;
-		color: inherit;
+		padding: 24px 16px 21px;
+		color: #586674;
+		border-bottom: 3px solid transparent;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: $color__link;
+		color: inherit;
+		border-color: $color__link;
 	}
 }
 
@@ -170,6 +180,10 @@
 	}
 	li {
 		float: none;
+
+		&:hover a {
+			border-color: $color__line;
+		}
 	}
 	a {
 		padding-top: .75rem;
