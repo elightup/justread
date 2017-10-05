@@ -16,7 +16,7 @@
 		<?php endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a class="card__media" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail( 'justread-adjacent' ); ?>
+				<?php the_post_thumbnail(); ?>
 			</a>
 		<?php endif; ?>
 		<div class="card__body">
