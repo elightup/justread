@@ -1178,6 +1178,19 @@ a:hover {
 	        box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
 	background: #fff;
 	position: relative;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.card:hover {
+	-webkit-box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
+	        box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
+}
+
+.card:hover .card__media img {
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 .card__body {
@@ -1219,12 +1232,6 @@ a:hover {
 	width: 100%;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
-}
-
-.card__media:hover img {
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
 }
 
 .card__footer {

@@ -17,6 +17,15 @@
 	box-shadow: 0 2px 4px rgba(38, 50, 56, .05);
 	background: #fff;
 	position: relative;
+	transition: all .3s ease;
+
+	&:hover {
+		box-shadow: 0 4px 8px rgba(38, 50, 56, .1);
+
+		.card__media img {
+			transform: scale(1.1);
+		}
+	}
 
 	&__body {
 		padding: 1rem 2rem 2rem;
@@ -49,10 +58,6 @@
 			display: block;
 			width: 100%;
 			transition: all .3s ease;
-		}
-
-		&:hover img {
-			transform: scale(1.1);
 		}
 	}
 	&__footer {
