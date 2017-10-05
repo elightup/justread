@@ -1208,10 +1208,23 @@ a:hover {
 	font-size: 1rem;
 }
 
+.card__media {
+	display: block;
+	overflow: hidden;
+	border-radius: 4px 4px 0 0;
+}
+
 .card__media img {
 	display: block;
 	width: 100%;
-	border-radius: 4px 4px 0 0;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.card__media:hover img {
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 .card__footer {
@@ -1478,6 +1491,7 @@ a:hover {
 	-webkit-transition: all .2s;
 	transition: all .2s;
 	margin: 0 .25rem .25rem 0;
+	text-transform: lowercase;
 }
 
 .tags-links a:hover {

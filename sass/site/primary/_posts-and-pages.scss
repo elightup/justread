@@ -40,10 +40,20 @@
 	&__content {
 		@include font-size(1);
 	}
-	&__media img {
+	&__media {
 		display: block;
-		width: 100%;
+		overflow: hidden;
 		border-radius: 4px 4px 0 0;
+
+		img {
+			display: block;
+			width: 100%;
+			transition: all .3s ease;
+		}
+
+		&:hover img {
+			transform: scale(1.1);
+		}
 	}
 	&__footer {
 		@include font-size(.75);
@@ -252,6 +262,7 @@
 		border-radius: 99px;
 		transition: all .2s;
 		margin: 0 .25rem .25rem 0;
+		text-transform: lowercase;
 
 		&:hover {
 			background: $color__link;

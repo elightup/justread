@@ -28,7 +28,7 @@ function justread_posted_on() {
 	$byline = sprintf(
 		/* translators: %s: post author. */
 		'%s <span class="author vcard"><a class="url fn n" href="%s">%s</a></span>',
-		get_avatar( get_the_author_meta( 'user_email' ), 32 ),
+		get_avatar( get_the_author_meta( 'user_email' ), 24 ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		esc_html( get_the_author() )
 	);

@@ -40,3 +40,10 @@ Just Read includes support for Infinite Scroll in Jetpack.
 Demo images:
 * https://unsplash.com/photos/e2dDvdH3lIY
 * https://unsplash.com/photos/FIM--j1B_Rc
+* https://unsplash.com/photos/6MT4_Ut8a3Y
+* https://unsplash.com/photos/rTZW4f02zY8
+* https://unsplash.com/photos/yZygONrUBe8
+* https://unsplash.com/photos/YoelVcKWmws
+* https://unsplash.com/photos/VHpDp_GkGgc
+* https://unsplash.com/photos/EZSm8xRjnX0
+* https://unsplash.com/photos/T6fDN60bMWY
