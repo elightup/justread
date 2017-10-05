@@ -1410,6 +1410,39 @@ a:hover {
 	padding: 2rem;
 }
 
+.page .entry-media,
+.single .entry-media {
+	position: relative;
+	margin: -2rem -2rem 4rem;
+}
+
+@media (min-width: 768px) {
+	.page .entry-media,
+	.single .entry-media {
+		margin: -4rem -4rem 4rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.page .entry-media,
+	.single .entry-media {
+		margin: -4rem -8rem 4rem;
+	}
+}
+
+.page .singular-thumbnail,
+.single .singular-thumbnail {
+	display: block;
+	width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.page .singular-thumbnail,
+	.single .singular-thumbnail {
+		border-radius: 4px 4px 0 0;
+	}
+}
+
 .page .entry-content > p:first-child,
 .single .entry-content > p:first-child {
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;

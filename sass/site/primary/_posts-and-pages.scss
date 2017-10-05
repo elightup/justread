@@ -165,9 +165,6 @@
 		font-weight: bold;
 		@include font-size(.75);
 		text-transform: uppercase;
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
 		letter-spacing: 1px;
 		color: $color__silver;
 
@@ -195,6 +192,25 @@
 		border-radius: 4px;
 		box-shadow: 0 7px 50px 0 rgba(38, 50, 56, .07);
 		padding: 2rem;
+	}
+	.entry-media {
+		position: relative;
+		margin: -2rem -2rem 4rem;
+
+		@media (min-width: 768px) {
+			margin: -4rem -4rem 4rem;
+		}
+		@media (min-width: 1024px) {
+			margin: -4rem -8rem 4rem;
+		}
+	}
+	.singular-thumbnail {
+		display: block;
+		width: 100%;
+
+		@media (min-width: 1024px) {
+			border-radius: 4px 4px 0 0;
+		}
 	}
 	.entry-content > p:first-child {
 		font-family: $font__sans-serif;
