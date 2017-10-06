@@ -20,3 +20,11 @@
 .search-field {
 	width: 100%;
 }
+.widget_wpcom_social_media_icons_widget a {
+	color: inherit;
+	@include font-size(1.25);
+
+	&:hover {
+		color: $color__text-main;
+	}
+}
