@@ -85,3 +85,19 @@ function justread_category_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'justread_category_title' );
+
+/**
+ * Change the tag could args
+ *
+ * @param array $args Widget parameters.
+ *
+ * @return mixed
+ */
+function justread_tag_cloud_args( $args ) {
+	$args['largest']  = 1; // Largest tag.
+	$args['smallest'] = 1; // Smallest tag.
+	$args['unit']     = 'em'; // Tag font unit.
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'justread_tag_cloud_args' );

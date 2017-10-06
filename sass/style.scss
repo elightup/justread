@@ -7,7 +7,7 @@ Description: Custom theme: Just Read, developed by GretaThemes
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: justread2
+Text Domain: justread
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -84,6 +84,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Grids
+--------------------------------------------------------------*/
+@import "modules/grid";
 
 /*--------------------------------------------------------------
 # Widgets

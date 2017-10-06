@@ -22,9 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'justread2' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'justread' ); ?></a>
 
-	<?php get_search_form(); ?>
+	<div class="form-wrapper" id="form-wrapper">
+		<button class="search-close" id="search-close">&times;</button>
+		<?php get_search_form(); ?>
+	</div>
 
 	<header id="masthead" class="site-header">
 		<div class="navbar">
@@ -58,8 +61,8 @@
 		</div>
 		<div class="social-icons">
 			<?php if ( function_exists( 'jetpack_social_menu' ) ) jetpack_social_menu(); ?>
-			<?php echo justread_get_svg ( array( 'icon' => 'search' ) ); ?>
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread2' ); ?></button>
+			<?php echo justread_get_svg ( array( 'icon' => 'search', 'id' => 'search-toggle' ) ); ?>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread' ); ?></button>
 		</div>
 	</header><!-- #masthead -->
 

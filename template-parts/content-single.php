@@ -30,7 +30,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'justread2' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'justread' ),
 				'after'  => '</div>',
 			) );
 			?>

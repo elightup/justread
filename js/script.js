@@ -1,10 +1,10 @@
 ( function( document, window ) {
-	var form = document.querySelector( '.search-form' ),
-		open = document.querySelector( '.icon-search' ),
+	var form = document.getElementById( 'form-wrapper' ),
+		open = document.getElementById( 'search-toggle' ),
 		close = document.getElementById( 'search-close' ),
 		click = 'ontouchstart' in window ? 'touchstart' : 'click';
-	open.addEventListener( click, openSearchForm, false );
-	close.addEventListener( click, closeSearchForm, false );
+	open.addEventListener( click, openSearchForm, true );
+	close.addEventListener( click, closeSearchForm, true );
 
 	function openSearchForm() {
 		form.classList.add( 'is-visible' );

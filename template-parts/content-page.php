@@ -25,7 +25,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'justread2' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'justread' ),
 				'after'  => '</div>',
 			) );
 			?>
@@ -38,7 +38,7 @@
 						sprintf(
 							wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Edit <span class="screen-reader-text">%s</span>', 'justread2' ),
+								__( 'Edit <span class="screen-reader-text">%s</span>', 'justread' ),
 								array(
 									'span' => array(
 										'class' => array(),

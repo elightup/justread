@@ -1,4 +1,4 @@
-.search-form {
+.form-wrapper {
 	height: 0;
 	background: $color__link;
 	padding: 0 2rem;
@@ -142,15 +142,21 @@
 /* Footer */
 .site-footer {
 	background: #fff;
-	@include font-size(.75);
 	font-family: $font__sans-serif;
-	padding: 2rem;
+	@include font-size(.875);
 	margin-top: 5rem;
-	text-align: center;
 	border-top: 1px solid $color__line;
 	color: $color__silver;
-
-	a {
-		color: $color__silver;
-	}
+}
+.footer-widgets {
+	max-width: 1280px;
+	margin: 0 auto;
+	border-bottom: 1px solid $color__line;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.site-info {
+	@include font-size(.75);
+	text-align: center;
+	padding: 2rem;
 }

@@ -11,5 +11,4 @@
 		<span class="screen-reader-text"><?php esc_html_e( 'Search for:', 'justread' ); ?></span>
 		<input class="search-field" placeholder="<?php esc_attr_e( 'Search &hellip;', 'justread' ); ?>" value="<?php the_search_query(); ?>" name="s" type="search">
 	</label>
-	<button class="search-close" id="search-close">&times;</button>
 </form>

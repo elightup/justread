@@ -14,15 +14,21 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+			<div class="footer-widgets grid grid--4">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			</div>
+		<?php endif; ?>
+
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'justread2' ) ); ?>"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'justread' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'justread2' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'justread' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'justread2' ), 'justread2', '<a href="https://gretathemes.com">GretaThemes</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'justread' ), 'justread', '<a href="https://gretathemes.com">GretaThemes</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

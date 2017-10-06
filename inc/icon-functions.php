@@ -44,10 +44,11 @@ function justread_get_svg( $args = array() ) {
 
 	// Set defaults.
 	$defaults = array(
-		'icon'        => '',
-		'title'       => '',
-		'desc'        => '',
-		'fallback'    => false,
+		'icon'     => '',
+		'title'    => '',
+		'desc'     => '',
+		'fallback' => false,
+		'id'       => '',
 	);
 
 	// Parse args.
@@ -80,8 +81,14 @@ function justread_get_svg( $args = array() ) {
 		}
 	}
 
+	// Custom ID for JavaScript actions.
+	$id = '';
+	if ( $args['id'] ) {
+		$id = ' id="' . esc_attr( $args['id'] ) . '"';
+	}
+
 	// Begin SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
+	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $id . $aria_hidden . $aria_labelledby . ' role="img">';
 
 	// Display the title.
 	if ( $args['title'] ) {
