@@ -112,7 +112,7 @@
 	flex: 1;
 }
 .site-branding {
-	margin-right: 1em;
+	margin: .5rem 1.5rem .5rem 0;
 }
 .site-title {
 	margin: 0;
@@ -126,7 +126,9 @@
 	}
 }
 .site-description {
-	display: none;
+	@include font-size(.75);
+	color: #586674;
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------

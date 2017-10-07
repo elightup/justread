@@ -17,9 +17,11 @@
 function justread_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'justread_infinite_scroll_render',
-		'footer'    => 'page',
+		'container'      => 'main',
+		'render'         => 'justread_infinite_scroll_render',
+		'footer'         => 'page',
+		'footer_widgets' => 'sidebar-1',
+		'wrapper'        => false,
 	) );
 
 	// Add theme support for Responsive Videos.

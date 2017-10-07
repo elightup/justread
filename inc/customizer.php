@@ -25,6 +25,8 @@ function justread_customize_register( $wp_customize ) {
 			'render_callback' => 'justread_customize_partial_blogdescription',
 		) );
 	}
+
+	$wp_customize->remove_control( 'header_image' );
 }
 add_action( 'customize_register', 'justread_customize_register' );
 

@@ -81,6 +81,9 @@ if ( ! function_exists( 'justread_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		// Add theme support for editor style.
+		add_editor_style();
 	}
 endif;
 add_action( 'after_setup_theme', 'justread_setup' );
@@ -164,4 +167,3 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
