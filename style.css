@@ -729,6 +729,7 @@ a:hover {
 	position: absolute;
 	right: 0;
 	top: 101%;
+	width: 100%;
 }
 
 .main-navigation.toggled ul {

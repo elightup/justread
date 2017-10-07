@@ -9,9 +9,31 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
 
 */
 
-/*
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+.menu-toggle {
+	margin-right: .5rem;
+	margin-left: 0;
+}
+.main-navigation.toggled .menu {
+	right: auto;
+	left: 0;
+}
+.main-navigation ul {
+	padding-right: 0;
+}
+.form-wrapper .search-close {
+	right: auto;
+	left: 0;
+}
+@media (min-width: 768px) {
+	.form-wrapper .search-close {
+		left: 2rem;
+	}
+}
+.sticky .icon-bookmark {
+	right: auto;
+	left: 1rem;
+}
