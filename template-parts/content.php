@@ -26,7 +26,7 @@
 					$category = get_the_category();
 					$category = reset( $category );
 					?>
-					<a class="card__subtitle" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
+					<a class="cat-links card__subtitle" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
 				<?php endif; ?>
 				<?php the_title( '<h2 class="entry-title card__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			</header><!-- .entry-header -->

@@ -27,13 +27,22 @@ function justread_jetpack_setup() {
 
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
-		'post-details' => array(
+		'blog-display'    => 'excerpt',
+		'post-details'    => array(
 			'stylesheet' => 'justread-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
 			'author'     => '.byline',
 			'comment'    => '.comments-link',
+		),
+		'featured-images' => array(
+			'archive'         => true,
+			'archive-default' => true,
+			'post'            => true,
+			'post-default'    => true,
+			'page'            => true,
+			'page-default'    => true,
 		),
 	) );
 

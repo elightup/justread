@@ -28,7 +28,7 @@
 	}
 
 	&__body {
-		padding: 1rem 2rem 2rem;
+		padding: 1.5rem 2rem;
 	}
 	&__subtitle {
 		@include font-size(.75);
@@ -36,6 +36,12 @@
 		text-transform: uppercase;
 		font-family: $font__sans-serif;
 		letter-spacing: 1px;
+
+		&.cat-links {
+			padding-right: 0;
+			float: left;
+			width: auto;
+		}
 	}
 	&__title {
 		font-size: 1.2em;
@@ -63,7 +69,6 @@
 	&__footer {
 		@include font-size(.75);
 		font-family: $font__sans-serif;
-		margin: 1.6rem 0 -1rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -74,6 +79,12 @@
 		}
 		a {
 			color: $color__silver;
+		}
+
+		.byline,
+		.posted-on {
+			margin-top: 24px;
+			margin-bottom: -3px;
 		}
 	}
 	a:hover {
@@ -157,7 +168,9 @@
 			text-transform: none;
 			margin: 0 5px;
 		}
-		.dash {
+		.comments-link:before {
+			content: '\2014';
+			display: inline-block;
 			margin: 0 5px;
 		}
 		.avatar {
