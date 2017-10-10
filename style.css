@@ -333,7 +333,8 @@ blockquote:before {
 blockquote cite {
 	display: block;
 	margin-top: .8em;
-	font-size: 1rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	font-style: normal;
@@ -1032,6 +1033,11 @@ a.page-numbers:hover {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* Search form */
+.search-field {
+	max-width: 30em;
+}
+
 .form-wrapper {
 	height: 0;
 	background: #06c;
@@ -1247,6 +1253,7 @@ a.page-numbers:hover {
 }
 
 .card__content {
+	clear: both;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1310,6 +1317,54 @@ a.page-numbers:hover {
 
 .hfeed.error404 .site-content {
 	max-width: 58.5rem;
+}
+
+.hfeed .format-quote blockquote {
+	font-size: 1.5em;
+	border-top: none;
+	margin-bottom: 0;
+	text-align: center;
+	padding: 1em;
+}
+
+.hfeed .format-quote blockquote > * {
+	position: relative;
+	z-index: 2;
+}
+
+.hfeed .format-quote blockquote:before {
+	top: 50%;
+	left: 50%;
+	margin-top: -39px;
+	margin-left: -39px;
+	font-size: 8em;
+	color: rgba(38, 50, 56, 0.1);
+	z-index: 1;
+	line-height: 1;
+}
+
+.hfeed .format-quote blockquote cite {
+	font-size: 12px;
+	font-size: 0.75rem;
+	position: absolute;
+	left: -1.5rem;
+	bottom: -4.2rem;
+}
+
+.hfeed .format-quote blockquote cite a {
+	color: inherit;
+}
+
+.hfeed .format-quote blockquote cite a:hover {
+	color: #06c;
+}
+
+.hfeed .format-quote .card__footer {
+	justify-content: end;
+}
+
+.hfeed .format-quote .byline {
+	display: none;
 }
 
 .page-header {
@@ -1577,6 +1632,11 @@ a.page-numbers:hover {
 	transform: translate(0, 0);
 	/* For browsers don't support translate3d. */
 	transform: translate3d(0, 0, 0);
+}
+
+/* No content */
+.no-results {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
