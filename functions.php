@@ -128,6 +128,11 @@ function justread_scripts() {
 
 	wp_enqueue_script( 'justread-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	// Scripts for sticky sharing icons. Applied only for single posts and icon style.
+	if ( justread_is_sharing_icons_enabled() ) {
+		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/js/sticky-sidebar.js', '3.2.0',  true );
+	}
+
 	wp_enqueue_script( 'justread', get_template_directory_uri() . '/js/script.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

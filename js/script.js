@@ -1,4 +1,4 @@
-( function( document, window ) {
+( function( document, window, undefined ) {
 	var form = document.getElementById( 'form-wrapper' ),
 		open = document.getElementById( 'search-toggle' ),
 		close = document.getElementById( 'search-close' ),
@@ -14,4 +14,16 @@
 		event.preventDefault();
 		form.classList.remove( 'is-visible' );
 	}
+
+	// Sticky share button for single posts. Applied only for large screens and icon style.
+	if ( window.innerWidth >= 1200 && 'undefined' !== typeof StickySidebar ) {
+		var adminBarHeight = document.body.classList.contains( 'admin-bar' ) ? 32 : 0,
+			sharedaddy = new StickySidebar( '.entry-body .sharedaddy', {
+				containerSelector: '.entry-body',
+				innerWrapperSelector: '.sd-social-icon',
+				topSpacing: adminBarHeight
+			} );
+	}
+
+
 } )( document, window );

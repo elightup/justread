@@ -152,7 +152,8 @@ figure {
 }
 
 hr {
-	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
 	height: 0;
 }
 
@@ -212,7 +213,8 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 0;
 }
 
@@ -384,14 +386,16 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
 }
 
 body {
@@ -488,6 +492,7 @@ input[type="submit"] {
 	font-size: 0.875rem;
 	line-height: 1;
 	padding: .75rem 1.25rem;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	font-weight: bold;
@@ -555,6 +560,7 @@ textarea {
 a {
 	color: #06c;
 	text-decoration: none;
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -582,7 +588,8 @@ a:hover {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
+	-webkit-box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
+	        box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
 	float: left;
 	position: absolute;
 	top: 101%;
@@ -590,9 +597,11 @@ a:hover {
 	z-index: 99999;
 	background: #fff;
 	width: 200px;
-	transform: translate3d(0, 10px, 0);
+	-webkit-transform: translate3d(0, 10px, 0);
+	        transform: translate3d(0, 10px, 0);
 	opacity: 0;
 	visibility: hidden;
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -623,7 +632,8 @@ a:hover {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
 	opacity: 1;
 	visibility: visible;
 }
@@ -687,8 +697,12 @@ a:hover {
 	text-indent: -999em;
 	margin: 1.5rem 0 1.5rem .5rem;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 0 0 0 1.25rem;
 	background: transparent;
 	border: none;
@@ -706,6 +720,7 @@ a:hover {
 	display: block;
 	border-top: 0.5625rem double currentColor;
 	border-bottom: 0.1875rem solid currentColor;
+	-webkit-transition: all .5s;
 	transition: all .5s;
 }
 
@@ -721,7 +736,8 @@ a:hover {
 	display: block;
 	background: #fff;
 	width: 100%;
-	box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
+	-webkit-box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
+	        box-shadow: 0 10px 20px rgba(38, 50, 56, 0.1);
 }
 
 .main-navigation.toggled ul ul {
@@ -729,8 +745,11 @@ a:hover {
 	opacity: 1;
 	position: static;
 	float: none;
-	transform: none;
-	box-shadow: none;
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .main-navigation.toggled ul ul a {
@@ -811,6 +830,7 @@ a.page-numbers {
 	padding: .75rem 1rem;
 	border-radius: 2px;
 	color: inherit;
+	-webkit-transition: all .2s;
 	transition: all .2s;
 	margin: 0 2px;
 }
@@ -842,12 +862,18 @@ a.page-numbers:hover {
 
 @media (min-width: 768px) {
 	.post-navigation .nav-links {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
 	}
 	.adjacent {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		max-width: 50%;
 	}
@@ -870,7 +896,8 @@ a.page-numbers:hover {
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	color: #21759b;
 	display: block;
@@ -950,8 +977,11 @@ a.page-numbers:hover {
 # Grids
 --------------------------------------------------------------*/
 .grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	padding: 0 .5rem;
 }
 
@@ -1036,6 +1066,7 @@ a.page-numbers:hover {
 	height: 0;
 	background: #06c;
 	padding: 0 2rem;
+	-webkit-transition: all .3s;
 	transition: all .3s;
 	position: relative;
 	z-index: 1;
@@ -1097,6 +1128,16 @@ a.page-numbers:hover {
 	outline: none;
 }
 
+.form-wrapper .search-field::-webkit-input-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
+.form-wrapper .search-field:-ms-input-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
 .form-wrapper .search-field::placeholder {
 	color: #fff;
 	opacity: .3;
@@ -1105,9 +1146,15 @@ a.page-numbers:hover {
 /* Header */
 .site-header {
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background: #fff;
 	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
 	padding: 0 1rem;
@@ -1123,8 +1170,12 @@ a.page-numbers:hover {
 }
 
 .social-icons {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .social-icons .icon-search {
@@ -1156,9 +1207,15 @@ a.page-numbers:hover {
 }
 
 .navbar {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	flex: 1;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
 .site-branding {
@@ -1204,18 +1261,23 @@ a.page-numbers:hover {
 /* Card */
 .card {
 	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
+	-webkit-box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
+	        box-shadow: 0 2px 4px rgba(38, 50, 56, 0.05);
 	background: #fff;
 	position: relative;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
 .card:hover {
-	box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
+	-webkit-box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
+	        box-shadow: 0 4px 8px rgba(38, 50, 56, 0.1);
 }
 
 .card:hover .card__media img {
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 .card__body {
@@ -1261,6 +1323,7 @@ a.page-numbers:hover {
 .card__media img {
 	display: block;
 	width: 100%;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
@@ -1268,9 +1331,15 @@ a.page-numbers:hover {
 	font-size: 12px;
 	font-size: 0.75rem;
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .card__footer img {
@@ -1403,8 +1472,10 @@ a.page-numbers:hover {
 .single .entry-body {
 	background: #fff;
 	border-radius: 4px;
-	box-shadow: 0 7px 50px 0 rgba(38, 50, 56, 0.07);
+	-webkit-box-shadow: 0 7px 50px 0 rgba(38, 50, 56, 0.07);
+	        box-shadow: 0 7px 50px 0 rgba(38, 50, 56, 0.07);
 	padding: 2rem;
+	position: relative;
 }
 
 .page .entry-media,
@@ -1526,6 +1597,7 @@ a.page-numbers:hover {
 	color: #06c;
 	padding: .2em 1em;
 	border-radius: 99px;
+	-webkit-transition: all .2s;
 	transition: all .2s;
 	margin: 0 .25rem .5rem 0;
 	text-transform: lowercase;
@@ -1548,6 +1620,38 @@ a.page-numbers:hover {
 
 .entry-footer .edit-link a {
 	color: #6f8590;
+}
+
+/* Jetpack sharing icons */
+.adjacent .sharedaddy {
+	display: none;
+}
+
+.sticky-sharing .sharedaddy {
+	position: absolute !important;
+	top: 0;
+	left: -72px;
+	width: 64px;
+	text-align: center;
+	will-change: min-height;
+}
+
+.sticky-sharing .sharedaddy .sd-title.sd-title:before {
+	display: none;
+}
+
+.sticky-sharing .sharedaddy .sd-content li {
+	display: block;
+	margin-right: 0;
+}
+
+.sticky-sharing .sharedaddy .sh-sharing {
+	-webkit-transform: translate(0, 0);
+	    -ms-transform: translate(0, 0);
+	        transform: translate(0, 0);
+	/* For browsers don't support translate3d. */
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
 }
 
 /*--------------------------------------------------------------
@@ -1649,21 +1753,33 @@ a.page-numbers:hover {
 .comment-form-author,
 .comment-form-email,
 .comment-form-url {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 @media (min-width: 768px) {
 	.comment-form-author,
 	.comment-form-email,
 	.comment-form-url {
-		flex-direction: row;
-		align-items: center;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	.comment-form-author label,
 	.comment-form-email label,
 	.comment-form-url label {
-		order: 2;
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
 		margin-left: 1em;
 	}
 }
@@ -1729,7 +1845,8 @@ a.page-numbers:hover {
 /* Load more button */
 .infinite-loader,
 #infinite-handle {
-	flex-basis: 100%;
+	-ms-flex-preferred-size: 100%;
+	    flex-basis: 100%;
 	text-align: center;
 }
 
@@ -1855,5 +1972,3 @@ object {
 .gallery-caption {
 	display: block;
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -15,11 +15,32 @@ function justread_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
+	} elseif ( justread_is_sharing_icons_enabled() ) {
+		$classes[] = 'sticky-sharing';
 	}
 
 	return $classes;
 }
 add_filter( 'body_class', 'justread_body_classes' );
+
+/**
+ * Check if sharing icons enabled for singular pages and has icon style.
+ * @return bool
+ */
+function justread_is_sharing_icons_enabled() {
+	if ( ! class_exists( 'Sharing_Service' ) ) {
+		return false;
+	}
+	if ( ! is_singular() ) {
+		return false;
+	}
+	$sharer = new Sharing_Service();
+	$options = $sharer->get_global_options();
+	if ( 'icon' !== $options['button_style'] ) {
+		return false;
+	}
+	return ( is_single() && in_array( 'post', $options['show'], true ) ) || ( is_page() && in_array( 'page', $options['show'], true ) );
+}
 
 /**
  * Change output of adjacent post links.
@@ -64,12 +85,6 @@ function justread_excerpt_more() {
 	return '&hellip;';
 }
 add_filter( 'excerpt_more', 'justread_excerpt_more' );
-
-
-function justread_load_svg() {
-	include get_parent_theme_file_path( 'images/symbol-defs.svg' );
-}
-add_action( 'wp_footer', 'justread_load_svg', 1 );
 
 /**
  * Remove Category: and Tag: in the archive page title.

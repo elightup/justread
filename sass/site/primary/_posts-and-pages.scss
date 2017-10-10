@@ -184,6 +184,7 @@
 		border-radius: 4px;
 		box-shadow: 0 7px 50px 0 rgba(38, 50, 56, .07);
 		padding: 2rem;
+		position: relative;
 	}
 	.entry-media {
 		position: relative;
@@ -293,5 +294,33 @@
 
 	a {
 		color: $color__silver;
+	}
+}
+
+/* Jetpack sharing icons */
+.sharedaddy {
+	.adjacent & {
+		display: none;
+	}
+
+	.sticky-sharing & {
+		position: absolute !important;
+		top: 0;
+		left: -72px;
+		width: 64px;
+		text-align: center;
+		will-change: min-height;
+
+		.sd-title.sd-title:before {
+			display: none;
+		}
+		.sd-content li {
+			display: block;
+			margin-right: 0;
+		}
+		.sh-sharing {
+			transform: translate(0, 0); /* For browsers don't support translate3d. */
+			transform: translate3d(0, 0, 0);
+		}
 	}
 }
