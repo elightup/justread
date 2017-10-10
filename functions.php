@@ -54,7 +54,6 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form',
 			'comment-form',
 			'comment-list',
 			'gallery',
@@ -63,7 +62,7 @@ if ( ! function_exists( 'justread_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'justread_custom_background_args', array(
-			'default-color' => 'ffffff',
+			'default-color' => 'f5f7f8',
 			'default-image' => '',
 		) ) );
 
@@ -84,6 +83,9 @@ if ( ! function_exists( 'justread_setup' ) ) :
 
 		// Add theme support for editor style.
 		add_editor_style();
+
+		// Add support for posts format
+		add_theme_support( 'post-formats', array( 'quote' ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'justread_setup' );
