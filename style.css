@@ -712,19 +712,12 @@ li .main-navigation .current_page_item > a, li
 	text-indent: -999em;
 	margin-left: 4px;
 	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	padding: 0 0 0 1.25rem;
 	background: transparent;
 	border: none;
 	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	overflow: hidden;
 }
 
 .menu-toggle:before {
@@ -1224,6 +1217,10 @@ a.page-numbers:hover {
 	margin: -7px 12px 0 0;
 }
 
+.social-icons .jetpack-social-navigation li {
+	margin-right: 4px;
+}
+
 .social-icons .jetpack-social-navigation a {
 	color: inherit;
 }
@@ -1388,6 +1385,7 @@ a.page-numbers:hover {
 .card__footer img {
 	vertical-align: middle;
 	border-radius: 50%;
+	margin-right: 3px;
 }
 
 .card__footer a {
