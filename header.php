@@ -61,7 +61,7 @@
 		</div>
 		<div class="social-icons">
 			<?php if ( function_exists( 'jetpack_social_menu' ) ) jetpack_social_menu(); ?>
-			<?php echo justread_get_svg ( array( 'icon' => 'search', 'id' => 'search-toggle' ) ); ?>
+			<button class="search-toggle" aria-controls="form-wrapper" aria-expanded="false"><?php echo justread_get_svg ( array( 'icon' => 'search' ) ); ?></button>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread' ); ?></button>
 		</div>
 	</header><!-- #masthead -->

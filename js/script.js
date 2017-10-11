@@ -1,14 +1,18 @@
 ( function( document, window, undefined ) {
 	var form = document.getElementById( 'form-wrapper' ),
-		open = document.getElementById( 'search-toggle' ),
+		toggle = document.querySelector( '.search-toggle' ),
 		close = document.getElementById( 'search-close' ),
 		click = 'ontouchstart' in window ? 'touchstart' : 'click';
-	open.addEventListener( click, openSearchForm );
+	toggle.addEventListener( click, toggleSearchForm );
 	close.addEventListener( click, closeSearchForm );
 
-	function openSearchForm() {
-		form.classList.add( 'is-visible' );
-		form.querySelector( '.search-field' ).focus();
+	function toggleSearchForm() {
+		if ( form.classList.contains( 'is-visible' ) ) {
+			closeSearchForm();
+		} else {
+			form.classList.add( 'is-visible' );
+			form.querySelector( '.search-field' ).focus();
+		}
 	}
 	function closeSearchForm() {
 		form.classList.remove( 'is-visible' );

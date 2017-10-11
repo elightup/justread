@@ -51,7 +51,7 @@ blockquote cite:before {
 	left: .75rem;
 }
 .menu-toggle {
-	margin-right: .5rem;
+	margin-right: 4px;
 	margin-left: 0;
 }
 .main-navigation.toggled ul ul a {
@@ -89,7 +89,7 @@ blockquote cite:before {
 /* Header */
 .social-icons .jetpack-social-navigation ul {
 	margin-right: 0;
-	margin-left: 24px;
+	margin-left: 12px;
 }
 .site-branding {
 	margin-right: 0;
