@@ -61,26 +61,27 @@
 	// Dropdown icon
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
+
 		&::after {
 			content: "";
 			display: block;
-			border: .25rem solid transparent;
-			border-top-color: currentColor;
+			background: url(images/angle-down.svg) center right no-repeat;
+			background-size: 12px 12px;
+			width: 12px;
+			height: 12px;
 			position: absolute;
 			z-index: 1001;
-			right: .375rem;
+			right: 0;
 			top: 50%;
-			margin-top: -.125rem;
+			margin-top: -6px;
 		}
 	}
 	li {
 		.menu-item-has-children > a,
 		.page_item_has_children > a {
 			&::after {
-				border-top-color: transparent;
-				border-left-color: currentColor;
+				background-image: url(images/angle-right.svg);
 				right: .75rem;
-				margin-top: -.25rem;
 			}
 		}
 	}

@@ -171,6 +171,13 @@
 	border-bottom: 1px solid $color__line;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+
+	.widget_wpcom_social_media_icons_widget li {
+		display: inline-block;
+	}
+	.widget_wpcom_social_media_icons_widget .genericon {
+		font-size: 24px;
+	}
 }
 .site-info {
 	@include font-size(.75);
