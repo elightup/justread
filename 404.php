@@ -19,7 +19,7 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'justread' ); ?></p>
-					<p class="f5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( '&larr; Back to home' ); ?></a></p>
+					<p class="f5"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( '&larr; Back to home', 'justread' ); ?></a></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

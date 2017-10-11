@@ -1,49 +1,62 @@
-=== Just Read ===
-
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-
-A starter theme called Just Read.
+=== Justread ===
+Contributors: GretaThemes
+Requires at least: WordPress 4.5
+Tested up to: WordPress 4.8.2
+Version: 1.0.0
+Tags: one-column, grid-layout, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
 
 == Description ==
 
-Custom theme: Just Read, developed by GretaThemes
+Justread is a perfect choice for people who want a fast and clean website. Focusing on the layout and typography, we want to deliver a good reading experience to our WordPress users.
+
+Built on the latest technology of WordPress, Justread is lightweight, fast and optimized for all mobile phones.
 
 == Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+Please go to http://gretathemes.com/docs/justread/
 
-== Frequently Asked Questions ==
+== License ==
 
-= Does this theme support any plugins? =
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3.
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Just Read includes support for Infinite Scroll in Jetpack.
+Justread WordPress Theme, Copyright 2017 GretaThemes
+Justread is distributed under the terms of the GNU General Public License v3
+
+Unless otherwise specified, all Images are self shot by GretaThemes
+Copyright: GretaThemes, gretathemes.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Sticky Sidebar JavaScript Plugin.
+- License: https://github.com/abouolia/sticky-sidebar/blob/master/LICENSE.md
+- Source: https://abouolia.github.io/sticky-sidebar/
+
+Images used in the screenshot:
+- https://www.pexels.com/photo/silver-imac-near-white-ceramic-kettle-205316/
+- https://www.pexels.com/photo/man-using-laptop-on-table-against-white-background-257897/
+- https://www.pexels.com/photo/blur-bottle-bright-building-273238/
+- https://www.pexels.com/photo/blank-business-composition-computer-373076/
+- https://www.pexels.com/photo/high-angle-shot-of-laptop-and-smartphone-257923/
+- https://www.pexels.com/photo/concept-creative-creativity-ideas-450279/
+- https://www.pexels.com/photo/adult-business-desk-document-296886/
+
+Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Justread is Licensed under the GNU GPL 3 license
+http://gretathemes.com/
+
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
-* Initial release
-
-== Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-
-Demo images:
-* https://unsplash.com/photos/e2dDvdH3lIY
-* https://unsplash.com/photos/FIM--j1B_Rc
-* https://unsplash.com/photos/6MT4_Ut8a3Y
-* https://unsplash.com/photos/rTZW4f02zY8
-* https://unsplash.com/photos/yZygONrUBe8
-* https://unsplash.com/photos/YoelVcKWmws
-* https://unsplash.com/photos/VHpDp_GkGgc
-* https://unsplash.com/photos/EZSm8xRjnX0
-* https://unsplash.com/photos/T6fDN60bMWY
+See http://gretathemes.com/wordpress-themes/justread/
