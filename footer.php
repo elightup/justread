@@ -28,7 +28,7 @@
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'justread' ), 'justread', '<a href="https://gretathemes.com">GretaThemes</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'justread' ), 'Justread', '<a href="https://gretathemes.com">GretaThemes</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
