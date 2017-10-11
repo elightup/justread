@@ -117,6 +117,10 @@
 	.current-menu-ancestor > a {
 		color: inherit;
 		border-color: $color__link;
+
+		li & {
+			border-color: $color__line;
+		}
 	}
 }
 
