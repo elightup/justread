@@ -122,6 +122,15 @@
 			border-color: $color__line;
 		}
 	}
+
+	li {
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			border-color: $color__line;
+		}
+	}
 }
 
 .menu-toggle {

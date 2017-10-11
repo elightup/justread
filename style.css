@@ -700,6 +700,13 @@ li .main-navigation .current_page_item > a, li
 	border-color: rgba(38, 50, 56, 0.1);
 }
 
+.main-navigation li .current_page_item > a,
+.main-navigation li .current-menu-item > a,
+.main-navigation li .current_page_ancestor > a,
+.main-navigation li .current-menu-ancestor > a {
+	border-color: rgba(38, 50, 56, 0.1);
+}
+
 .menu-toggle {
 	color: inherit;
 	text-indent: -999em;
