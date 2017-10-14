@@ -9,6 +9,7 @@
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
+ *
  * @return array
  */
 function justread_body_classes( $classes ) {
@@ -21,10 +22,12 @@ function justread_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'justread_body_classes' );
 
 /**
  * Check if sharing icons enabled for singular pages and has icon style.
+ *
  * @return bool
  */
 function justread_is_sharing_icons_enabled() {
@@ -34,7 +37,7 @@ function justread_is_sharing_icons_enabled() {
 	if ( ! is_singular() ) {
 		return false;
 	}
-	$sharer = new Sharing_Service();
+	$sharer  = new Sharing_Service();
 	$options = $sharer->get_global_options();
 	if ( 'icon' !== $options['button_style'] ) {
 		return false;
@@ -49,6 +52,7 @@ function justread_is_sharing_icons_enabled() {
  * @param  string  $format        Link anchor format.
  * @param  string  $link          Link permalink format.
  * @param  WP_Post $adjacent_post The adjacent post.
+ *
  * @return string
  */
 function justread_adjacent_post_link( $output, $format, $link, $adjacent_post ) {
@@ -65,40 +69,49 @@ function justread_adjacent_post_link( $output, $format, $link, $adjacent_post ) 
 
 	return ob_get_clean();
 }
+
 add_filter( 'previous_post_link', 'justread_adjacent_post_link', 10, 4 );
 add_filter( 'next_post_link', 'justread_adjacent_post_link', 10, 4 );
 
 /**
  * Change excerpt length.
+ *
  * @return int
  */
 function justread_excerpt_length() {
 	return 20;
 }
+
 add_filter( 'excerpt_length', 'justread_excerpt_length' );
 
 /**
  * Change excerpt more.
+ *
  * @return int
  */
 function justread_excerpt_more() {
 	return '&hellip;';
 }
+
 add_filter( 'excerpt_more', 'justread_excerpt_more' );
 
 /**
  * Remove Category: and Tag: in the archive page title.
- * @param  string $title Archive page title
+ *
+ * @param  string $title Archive page title.
+ *
  * @return string
  */
 function justread_category_title( $title ) {
-    if ( is_category() ) {
-        $title = single_cat_title( '', false );
-    } if ( is_tag() ) {
-    	$title = single_tag_title( '', false );
-    }
-    return $title;
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	}
+	if ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	}
+	return $title;
 }
+
 add_filter( 'get_the_archive_title', 'justread_category_title' );
 
 /**
@@ -115,4 +128,61 @@ function justread_tag_cloud_args( $args ) {
 
 	return $args;
 }
+
 add_filter( 'widget_tag_cloud_args', 'justread_tag_cloud_args' );
+
+/**
+ * Register required and recommended plugins.
+ */
+function justread_register_required_plugins() {
+	$plugins = array(
+		array(
+			'name'     => esc_html__( 'Jetpack', 'justread' ),
+			'slug'     => 'jetpack',
+			'required' => true,
+		),
+		array(
+			'name'     => esc_html__( 'One click demo import', 'justread' ),
+			'slug'     => 'one-click-demo-import',
+		),
+	);
+	$config  = array(
+		'id' => 'justread',
+	);
+
+	tgmpa( $plugins, $config );
+}
+add_action( 'tgmpa_register', 'justread_register_required_plugins' );
+
+/**
+ * Demo files for importing.
+ *
+ * @return array List of demos configuration.
+ */
+function justread_import_files() {
+	return array(
+		array(
+			'import_file_name'             => esc_html__( 'Demo', 'justread' ),
+			'local_import_file'            => get_template_directory() . '/demos/demo-content.xml',
+			'local_import_widget_file'     => get_template_directory() . '/demos/widgets.wie',
+			'local_import_customizer_file' => get_template_directory() . '/demos/customizer.dat',
+			'import_preview_image_url'     => get_template_directory_uri() . '/screenshot.jpg',
+		),
+	);
+}
+add_filter( 'pt-ocdi/import_files', 'justread_import_files' );
+
+/**
+ * Setup the theme after importing demo.
+ */
+function justread_after_import_setup() {
+	// Assign menus to their locations.
+	$header = get_term_by( 'slug', 'header', 'nav_menu' );
+	$social = get_term_by( 'slug', 'social', 'nav_menu' );
+	set_theme_mod( 'nav_menu_locations', array(
+		'menu-1'              => $header->term_id,
+		'jetpack-social-menu' => $social->term_id,
+	) );
+}
+add_action( 'pt-ocdi/after_import', 'justread_after_import_setup' );
+add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );

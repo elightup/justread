@@ -84,7 +84,7 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		// Add theme support for editor style.
 		add_editor_style();
 
-		// Add support for posts format
+		// Add support for post formats.
 		add_theme_support( 'post-formats', array( 'quote' ) );
 	}
 endif;
@@ -166,7 +166,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * SVG icons functions and filters.
  */
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
+require get_template_directory() . '/inc/icon-functions.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -174,3 +174,14 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load TGM Activation Class.
+ */
+require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+
+/**
+ * Load theme dashboard.
+ */
+require get_template_directory() . '/inc/dashboard/class-justread-dashboard.php';
+new Justread_Dashboard();
