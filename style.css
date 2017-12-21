@@ -1452,7 +1452,7 @@ a.page-numbers:hover {
 	font-size: 0.75rem;
 	position: absolute;
 	left: -1.5rem;
-	bottom: -4.2rem;
+	bottom: -2.7rem;
 }
 
 .hfeed .format-quote blockquote cite a {
@@ -1464,9 +1464,8 @@ a.page-numbers:hover {
 }
 
 .hfeed .format-quote .card__footer {
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: end;
+	display: block;
+	text-align: rightcd;
 }
 
 .hfeed .format-quote .byline {

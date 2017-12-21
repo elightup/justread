@@ -142,7 +142,7 @@
 				@include font-size(.75);
 				position: absolute;
 				left: -1.5rem;
-				bottom: -4.2rem;
+				bottom: -2.7rem;
 
 				a {
 					color: inherit;
@@ -154,7 +154,8 @@
 			}
 		}
 		.card__footer {
-			justify-content: end;
+			display: block;
+			text-align: rightcd;
 		}
 		.byline {
 			display: none;
