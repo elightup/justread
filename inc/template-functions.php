@@ -132,29 +132,6 @@ function justread_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'justread_tag_cloud_args' );
 
 /**
- * Register required and recommended plugins.
- */
-function justread_register_required_plugins() {
-	$plugins = array(
-		array(
-			'name'     => esc_html__( 'Jetpack', 'justread' ),
-			'slug'     => 'jetpack',
-			'required' => true,
-		),
-		array(
-			'name'     => esc_html__( 'One click demo import', 'justread' ),
-			'slug'     => 'one-click-demo-import',
-		),
-	);
-	$config  = array(
-		'id' => 'justread',
-	);
-
-	tgmpa( $plugins, $config );
-}
-add_action( 'tgmpa_register', 'justread_register_required_plugins' );
-
-/**
  * Demo files for importing.
  *
  * @return array List of demos configuration.

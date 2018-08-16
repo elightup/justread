@@ -178,7 +178,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load TGM Activation Class.
  */
-require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/admin/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/admin/plugins.php';
 
 /**
  * Load theme dashboard.
