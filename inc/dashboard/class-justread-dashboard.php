@@ -49,8 +49,7 @@ class Justread_Dashboard {
 		$this->utm      = '?utm_source=WordPress&utm_medium=link&utm_campaign=' . $this->slug;
 
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
-		add_action( 'admin_init', array( $this, 'redirect' ) );
-		add_filter( 'wpforms_shareasale_id', array( $this, 'wpforms_shareasale_id' ) );
+		add_action( 'admin_init', array( $this, 'notice' ) );
 	}
 
 	/**
@@ -114,13 +113,29 @@ class Justread_Dashboard {
 	}
 
 	/**
-	 * Redirect to dashboard page after theme activation.
+	 * Add a notice after theme activation.
 	 */
-	public function redirect() {
+	public function notice() {
 		global $pagenow;
 		if ( is_admin() && isset( $_GET['activated'] ) && 'themes.php' === $pagenow ) {
-			wp_safe_redirect( admin_url( "themes.php?page={$this->slug}" ) );
-			exit;
+		?>
+		<div class="updated notice notice-success is-dismissible">
+			<p>
+				<?php
+				// Translators: theme name and welcome page.
+				echo wp_kses_post( sprintf( __( 'Welcome! Thank you for choosing %1$s. To get started, visit our <a href="%2$s">welcome page</a>.', 'justread' ), $this->theme->name, esc_url( admin_url( 'themes.php?page=' . $this->slug ) ) ) );
+				?>
+			</p>
+			<p>
+				<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=' . $this->slug ) ); ?>">
+					<?php
+					// Translators: theme name.
+					echo esc_html( sprintf( __( 'Get started with %s', 'justread' ), $this->theme->name ) );
+					?>
+				</a>
+			</p>
+		</div>
+		<?php
 		}
 	}
 
