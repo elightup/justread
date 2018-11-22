@@ -18,7 +18,7 @@
 		<?php endif; ?>
 		<div class="card__body">
 			<header class="card__header">
-				<?php if ( 'post' == get_post_type() ) : ?>
+				<?php if ( 'post' === get_post_type() ) : ?>
 					<?php
 					$category = get_the_category();
 					$category = reset( $category );

@@ -1,8 +1,7 @@
 === Justread ===
 Contributors: GretaThemes
 Requires at least: WordPress 4.5
-Tested up to: WordPress 4.8.2
-Version: 1.0.0
+Tested up to: WordPress 4.9.8
 Tags: one-column, grid-layout, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
 
 == Description ==
@@ -42,13 +41,14 @@ Sticky Sidebar JavaScript Plugin.
 - Source: https://abouolia.github.io/sticky-sidebar/
 
 Images used in the screenshot:
-- https://www.pexels.com/photo/silver-imac-near-white-ceramic-kettle-205316/
-- https://www.pexels.com/photo/man-using-laptop-on-table-against-white-background-257897/
-- https://www.pexels.com/photo/blur-bottle-bright-building-273238/
-- https://www.pexels.com/photo/blank-business-composition-computer-373076/
-- https://www.pexels.com/photo/high-angle-shot-of-laptop-and-smartphone-257923/
-- https://www.pexels.com/photo/concept-creative-creativity-ideas-450279/
-- https://www.pexels.com/photo/adult-business-desk-document-296886/
+- https://pixabay.com/en/notebook-work-girl-computer-woman-2386034/
+- https://pixabay.com/en/table-desk-notebook-potted-plant-869379/
+- https://pixabay.com/en/laptop-coffee-arm-desktop-notebook-1205256/
+- https://pixabay.com/en/light-office-computer-business-300431/
+- https://pixabay.com/en/gray-computer-mobile-2158653/
+- https://pixabay.com/en/smartphone-mobile-laptop-computer-925758/
+- https://pixabay.com/en/desk-computer-modern-keyboard-1140699/
+- https://pixabay.com/en/apple-smartphone-desk-laptop-1282241/
 
 Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.

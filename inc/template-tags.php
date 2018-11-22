@@ -1,11 +1,11 @@
 <?php
 /**
-* Custom template tags for this theme
-*
-* Eventually, some of the functionality here could be replaced by core features.
-*
-* @package Justread
-*/
+ * Custom template tags for this theme
+ *
+ * Eventually, some of the functionality here could be replaced by core features.
+ *
+ * @package Justread
+ */
 
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -16,7 +16,8 @@ function justread_posted_on() {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
+	$time_string = sprintf(
+		$time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
@@ -45,7 +46,8 @@ function justread_posted_on_single() {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
+	$time_string = sprintf(
+		$time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_attr( get_the_modified_date( 'c' ) ),
@@ -70,11 +72,23 @@ function justread_posted_on_single() {
 
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'justread' ), array(
-			'span' => array(
-				'class' => array(),
+		comments_popup_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: post title */
+					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', '_s' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
 			),
-		) ), get_the_title() ), false, false, 'comments-link' );
+			false,
+			false,
+			'comments-link'
+		);
 	}
 }
 

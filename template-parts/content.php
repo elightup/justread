@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="card">
 		<?php if ( is_sticky() ) : ?>
-			<?php echo justread_get_svg ( array( 'icon' => 'bookmark' ) ); ?>
+			<?php echo justread_get_svg( array( 'icon' => 'bookmark' ) ); // wpcs xss: ok. ?>
 		<?php endif; ?>
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a class="card__media" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -21,7 +21,7 @@
 		<?php endif; ?>
 		<div class="card__body">
 			<header class="entry-header">
-				<?php if ( 'post' == get_post_type() ) : ?>
+				<?php if ( 'post' === get_post_type() ) : ?>
 					<?php
 					$category = get_the_category();
 					$category = reset( $category );

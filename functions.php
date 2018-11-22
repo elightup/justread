@@ -45,26 +45,37 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		set_post_thumbnail_size( 363, 188, true );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Header', 'justread' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Header', 'justread' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'justread_custom_background_args', array(
-			'default-color' => 'f5f7f8',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'justread_custom_background_args',
+				array(
+					'default-color' => 'f5f7f8',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -74,12 +85,15 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		// Add theme support for editor style.
 		add_editor_style();
@@ -108,15 +122,17 @@ add_action( 'after_setup_theme', 'justread_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function justread_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer', 'justread' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Appears in the footer of the site.', 'justread' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'justread' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Appears in the footer of the site.', 'justread' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
 }
 add_action( 'widgets_init', 'justread_widgets_init' );
 
@@ -124,7 +140,7 @@ add_action( 'widgets_init', 'justread_widgets_init' );
  * Enqueue scripts and styles.
  */
 function justread_scripts() {
-	wp_enqueue_style( 'justread-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'justread-style', get_stylesheet_uri(), array(), '1.0.0' );
 
 	wp_enqueue_script( 'justread-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -132,10 +148,10 @@ function justread_scripts() {
 
 	// Scripts for sticky sharing icons. Applied only for single posts and icon style.
 	if ( justread_is_sharing_icons_enabled() ) {
-		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/js/sticky-sidebar.js', '3.2.0',  true );
+		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/js/sticky-sidebar.js', array(), '3.2.0', true );
 	}
 
-	wp_enqueue_script( 'justread', get_template_directory_uri() . '/js/script.js', array(), '', true );
+	wp_enqueue_script( 'justread', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -175,14 +191,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Load TGM Activation Class.
- */
-require_once get_template_directory() . '/inc/admin/class-tgm-plugin-activation.php';
-require_once get_template_directory() . '/inc/admin/plugins.php';
+if ( is_admin() ) {
+	/**
+	 * Load TGM Activation Class.
+	 */
+	require_once get_template_directory() . '/inc/admin/class-tgm-plugin-activation.php';
+	require_once get_template_directory() . '/inc/admin/plugins.php';
+
+	/**
+	 * Load theme dashboard.
+	 */
+	require get_template_directory() . '/inc/dashboard/class-justread-dashboard.php';
+	new Justread_Dashboard();
+}
 
 /**
- * Load theme dashboard.
+ * Customizer Pro.
  */
-require get_template_directory() . '/inc/dashboard/class-justread-dashboard.php';
-new Justread_Dashboard();
+require get_template_directory() . '/inc/customizer-pro/class-justread-customizer-pro.php';
+$customizer_pro = new Justread_Customizer_Pro();
+$customizer_pro->init();

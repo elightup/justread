@@ -156,10 +156,13 @@ function justread_after_import_setup() {
 	// Assign menus to their locations.
 	$header = get_term_by( 'slug', 'header', 'nav_menu' );
 	$social = get_term_by( 'slug', 'social', 'nav_menu' );
-	set_theme_mod( 'nav_menu_locations', array(
-		'menu-1'              => $header->term_id,
-		'jetpack-social-menu' => $social->term_id,
-	) );
+	set_theme_mod(
+		'nav_menu_locations',
+		array(
+			'menu-1'              => $header->term_id,
+			'jetpack-social-menu' => $social->term_id,
+		)
+	);
 }
 add_action( 'pt-ocdi/after_import', 'justread_after_import_setup' );
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );

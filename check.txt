@@ -1,0 +1,362 @@
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\404.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+   |       |     "\r\n"
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\archive.php
+--------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+    |       |     "\r\n"
+ 26 | ERROR | [x] Newline required after opening brace
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\functions.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 151 | WARNING | In footer ($in_footer) is not set explicitly
+     |         | wp_enqueue_script; It is recommended to load scripts in the
+     |         | footer. Please set this value to `true` to load it in the
+     |         | footer, or explicitly `false` if it should be loaded in the
+     |         | header.
+--------------------------------------------------------------------------------
+
+
+FILE: ...theme\wp-content\themes\justread\inc\admin\class-tgm-plugin-activation.php
+--------------------------------------------------------------------------------
+FOUND 39 ERRORS AND 37 WARNINGS AFFECTING 60 LINES
+--------------------------------------------------------------------------------
+    1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+      |         |     "\r\n"
+  261 | ERROR   | [x] Functions must not contain multiple empty lines in a row;
+      |         |     found 3 empty lines
+  285 | WARNING | [ ] Empty return statement not required here
+  334 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  340 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  346 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  352 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  358 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  364 | ERROR   | [ ] A gettext call containing placeholders was found, but was
+      |         |     not accompanied by a "translators:" comment on the line
+      |         |     above to clarify the meaning of the placeholders.
+  557 | WARNING | [ ] Processing form data without nonce verification.
+  557 | WARNING | [ ] Processing form data without nonce verification.
+  655 | ERROR   | [x] Parenthesis should always be used when instantiating a
+      |         |     new object.
+  712 | WARNING | [ ] Processing form data without nonce verification.
+  712 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+  712 | ERROR   | [ ] Detected usage of a non-sanitized input variable: $_GET
+  719 | WARNING | [ ] Processing form data without nonce verification.
+  719 | WARNING | [ ] Processing form data without nonce verification.
+  722 | WARNING | [ ] Processing form data without nonce verification.
+  732 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+  743 | WARNING | [ ] Variable assignment found within a condition. Did you
+      |         |     mean to do a comparison?
+  743 | ERROR   | [ ] Assignments must be the first block of code on a line
+  764 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+  857 | ERROR   | [x] Parenthesis should always be used when instantiating a
+      |         |     new object.
+  864 | ERROR   | [x] Parenthesis should always be used when instantiating a
+      |         |     new object.
+  934 | ERROR   | [x] When a multi-item array uses associative keys, each value
+      |         |     should start on a new line.
+  937 | ERROR   | [x] When a multi-item array uses associative keys, each value
+      |         |     should start on a new line.
+ 1284 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1285 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1286 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1287 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1288 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1289 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1290 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1291 | ERROR   | [ ] Inline comments must end in full-stops, exclamation
+      |         |     marks, or question marks
+ 1292 | WARNING | [ ] This comment is 50% valid code; is this commented out
+      |         |     code?
+ 1466 | WARNING | [ ] Method name "_get_plugin_basename_from_slug" should not
+      |         |     be prefixed with an underscore to indicate visibility
+ 1490 | WARNING | [ ] Method name "_get_plugin_data_from_name" should not be
+      |         |     prefixed with an underscore to indicate visibility
+ 1558 | ERROR   | [x] When a multi-item array uses associative keys, each value
+      |         |     should start on a new line.
+ 1592 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+ 1620 | WARNING | [ ] Processing form data without nonce verification.
+ 1620 | WARNING | [ ] Processing form data without nonce verification.
+ 1672 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+ 1695 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+ 2090 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+ 2139 | WARNING | [ ] Processing form data without nonce verification.
+ 2139 | WARNING | [ ] Processing form data without nonce verification.
+ 2139 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+ 2166 | WARNING | [ ] Method name "_gather_plugin_data" should not be prefixed
+      |         |     with an underscore to indicate visibility
+ 2623 | WARNING | [ ] urlencode() should only be used when dealing with legacy
+      |         |     applications rawurlencode() should now be used instead.
+      |         |     See http://php.net/manual/en/function.rawurlencode.php
+      |         |     and http://www.faqs.org/rfcs/rfc3986.html
+ 2768 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+ 2768 | ERROR   | [ ] Detected usage of a non-sanitized input variable: $_POST
+ 2769 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+ 2769 | ERROR   | [ ] Detected usage of a non-sanitized input variable: $_POST
+ 2771 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+ 2771 | ERROR   | [ ] Detected usage of a non-sanitized input variable: $_POST
+ 2822 | WARNING | [ ] Variable assignment found within a condition. Did you
+      |         |     mean to do a comparison?
+ 2822 | ERROR   | [ ] Assignments must be the first block of code on a line
+ 2916 | ERROR   | [ ] Missing wp_unslash() before sanitization.
+ 2916 | ERROR   | [ ] Detected usage of a non-sanitized input variable: $_POST
+ 3008 | WARNING | [ ] Method name "_get_plugin_data_from_name" should not be
+      |         |     prefixed with an underscore to indicate visibility
+ 3027 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+ 3040 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+ 3068 | WARNING | [ ] Processing form data without nonce verification.
+ 3068 | WARNING | [ ] Processing form data without nonce verification.
+ 3091 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+ 3220 | WARNING | [ ] This comment is 45% valid code; is this commented out
+      |         |     code?
+ 3222 | WARNING | [ ] This comment is 60% valid code; is this commented out
+      |         |     code?
+ 3243 | WARNING | [ ] This comment is 51% valid code; is this commented out
+      |         |     code?
+ 3259 | WARNING | [ ] This comment is 56% valid code; is this commented out
+      |         |     code?
+ 3317 | ERROR   | [x] Opening parenthesis of a multi-line function call must be
+      |         |     the last content on the line
+ 3317 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+      |         |     function call
+ 3317 | ERROR   | [x] Only one argument is allowed per line in a multi-line
+      |         |     function call
+ 3322 | ERROR   | [x] Closing parenthesis of a multi-line function call must be
+      |         |     on a line by itself
+ 3329 | WARNING | [ ] This comment is 62% valid code; is this commented out
+      |         |     code?
+ 3422 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+ 3648 | WARNING | [ ] Best practice suggestion: Declare only one class in a
+      |         |     file.
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 12 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...:\xampp\htdocs\gretatheme\wp-content\themes\justread\inc\custom-header.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
+--------------------------------------------------------------------------------
+ 25 | WARNING | [x] Array double arrow not aligned correctly; expected 6
+    |         |     space(s) between "'default-image'" and double arrow, but
+    |         |     found 10.
+ 26 | WARNING | [x] Array double arrow not aligned correctly; expected 1
+    |         |     space(s) between "'default-text-color'" and double arrow,
+    |         |     but found 5.
+ 27 | WARNING | [x] Array double arrow not aligned correctly; expected 14
+    |         |     space(s) between "'width'" and double arrow, but found 18.
+ 28 | WARNING | [x] Array double arrow not aligned correctly; expected 13
+    |         |     space(s) between "'height'" and double arrow, but found 17.
+ 29 | WARNING | [x] Array double arrow not aligned correctly; expected 8
+    |         |     space(s) between "'flex-height'" and double arrow, but
+    |         |     found 12.
+ 30 | WARNING | [x] Array double arrow not aligned correctly; expected 3
+    |         |     space(s) between "'wp-head-callback'" and double arrow, but
+    |         |     found 7.
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...heme\wp-content\themes\justread\inc\dashboard\class-justread-dashboard.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AND 1 WARNING AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+   1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+     |         |     "\r\n"
+ 106 | WARNING | [ ] Processing form data without nonce verification.
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...s\gretatheme\wp-content\themes\justread\inc\dashboard\sections\welcome.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+   |       |     "\r\n"
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...\xampp\htdocs\gretatheme\wp-content\themes\justread\inc\icon-functions.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AND 1 WARNING AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR   | [x] End of line character is invalid; expected "\n" but found
+    |         |     "\r\n"
+ 17 | WARNING | [x] "require_once" is a statement not a function; no
+    |         |     parentheses are required
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...pp\htdocs\gretatheme\wp-content\themes\justread\inc\template-functions.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 63 | ERROR | Overriding WordPress globals is prohibited. Found assignment to
+    |       | $post
+--------------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\index.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 24 | ERROR | [x] Newline required after opening brace
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\page.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 21 | ERROR | [x] Newline required after opening brace
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\search.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 26 | ERROR | [x] Newline required after opening brace
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\searchform.php
+--------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------
+ 14 | ERROR | [x] File must end with a newline character
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+
+FILE: C:\xampp\htdocs\gretatheme\wp-content\themes\justread\single.php
+--------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+    |       |     "\r\n"
+ 16 | ERROR | [x] Newline required after opening brace
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...\gretatheme\wp-content\themes\justread\template-parts\content-adjacent.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+   |       |     "\r\n"
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...docs\gretatheme\wp-content\themes\justread\template-parts\content-none.php
+--------------------------------------------------------------------------------
+FOUND 7 ERRORS AFFECTING 6 LINES
+--------------------------------------------------------------------------------
+  1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+    |       |     "\r\n"
+ 19 | ERROR | [x] Closing PHP tag must be on a line by itself
+ 21 | ERROR | [x] Opening PHP tag must be on a line by itself
+ 34 | ERROR | [x] Line indented incorrectly; expected 4 tabs, found 3
+ 34 | ERROR | [x] Closing PHP tag must be on a line by itself
+ 42 | ERROR | [x] Closing PHP tag must be on a line by itself
+ 48 | ERROR | [x] Closing PHP tag must be on a line by itself
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 7 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...docs\gretatheme\wp-content\themes\justread\template-parts\content-page.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+   |       |     "\r\n"
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...pp\htdocs\gretatheme\wp-content\themes\justread\template-parts\content.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | ERROR | [x] End of line character is invalid; expected "\n" but found
+   |       |     "\r\n"
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+Time: 19.84 secs; Memory: 43.25Mb
+

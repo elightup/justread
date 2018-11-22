@@ -8,6 +8,7 @@
      "browsersync": "browser-sync start --proxy \"test.dev\" --files \"**/*.php, js/*.js, style.css, rtl.css\"",
      "browsersync-work": "browser-sync start --proxy \"demo.gretathemes.dev/justread/\" --files \"**/*.php, js/*.js, style.css, rtl.css\"",
      "zip": "git archive -o justread.zip --prefix=justread/ HEAD",
+     "check": "phpcs --standard=WordPress --extensions=php . > check.txt",
      "upload": "scp justread.zip root@gretathemes.com:/var/www/gretathemes.com/downloads/",
      "release": "npm run zip && npm run upload"
    }

@@ -5,16 +5,16 @@
  * @package Justread
  */
 
-$action = $this->recommended_plugins_action();
+$actions = $this->recommended_plugins_action();
 ?>
 <div id="actions" class="gt-tab-pane">
 	<div class="feature-section two-col">
 		<div class="col">
-			<h3><?php echo esc_html( $action['title'] ); ?></h3>
-			<p><?php echo wp_kses_post( $action['body'] ); ?></p>
+			<h3><?php echo esc_html( $actions['title'] ); ?></h3>
+			<p><?php echo wp_kses_post( $actions['body'] ); ?></p>
 
-			<?php if ( ! empty( $action['button_text'] ) ) : ?>
-				<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins&plugin_status=install' ) ); ?>"><?php echo esc_html( $action['button_text'] ); ?></a>
+			<?php if ( ! empty( $actions['button_text'] ) ) : ?>
+				<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins&plugin_status=install' ) ); ?>"><?php echo esc_html( $actions['button_text'] ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( $this->jetpack_is_recommended() ) : ?>
@@ -30,7 +30,7 @@ $action = $this->recommended_plugins_action();
 
 			<h3><?php esc_html_e( 'Step 3 - Import Demo Data (Optional)', 'justread' ); ?></h3>
 			<p><?php esc_html_e( 'Import demo data if you want your website exactly the same as our demo.', 'justread' ); ?></p>
-			<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=pt-one-click-demo-import' ) ); ?>">Import Demo Now</a>
+			<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=pt-one-click-demo-import' ) ); ?>"><?php esc_html_e( 'Import Demo Now', 'justread' ); ?></a>
 		</div>
 	</div>
 </div>
