@@ -2,13 +2,21 @@
 	/* Make sure select elements fit in widgets. */
 	select {
 		width: 100%;
+		padding: .6875rem 1rem;
 	}
 	ul {
 		list-style: none;
 		padding-left: 0;
+
 	}
 	li {
 		margin-bottom: .5rem;
+		ul {
+			margin-top: .5rem;
+		}
+		li {
+			padding-left: 0.8rem;
+		}
 	}
 }
 .widget-title {

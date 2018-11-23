@@ -5,6 +5,7 @@
 
 	> * {
 		padding: .5rem;
+		width: 100%;
 	}
 }
 @media (min-width: 768px) {
@@ -22,9 +23,13 @@
 	}
 }
 @media (min-width: 1024px) {
+	.grid--4 > *,
 	.grid--3 > * {
 		width: 33.3333%;
 	}
+}
+
+@media (min-width: 1280px) {
 	.grid--4 > * {
 		width: 25%;
 	}
