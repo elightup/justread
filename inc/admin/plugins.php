@@ -2,7 +2,7 @@
 /**
  * Add required and recommended plugins.
  *
- * @package Digimag
+ * @package Justread
  */
 
 add_action( 'tgmpa_register', 'justread_register_required_plugins' );
@@ -31,7 +31,6 @@ function justread_required_plugins() {
 		array(
 			'name'     => esc_html__( 'Jetpack', 'justread' ),
 			'slug'     => 'jetpack',
-			'required' => true,
 		),
 		array(
 			'name' => esc_html__( 'One click demo import', 'justread' ),

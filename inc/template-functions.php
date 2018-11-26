@@ -79,6 +79,9 @@ add_filter( 'next_post_link', 'justread_adjacent_post_link', 10, 4 );
  * @return int
  */
 function justread_excerpt_length() {
+	if ( is_admin() ) {
+		return;
+	}
 	return 20;
 }
 
@@ -90,6 +93,9 @@ add_filter( 'excerpt_length', 'justread_excerpt_length' );
  * @return int
  */
 function justread_excerpt_more() {
+	if ( is_admin() ) {
+		return;
+	}
 	return '&hellip;';
 }
 

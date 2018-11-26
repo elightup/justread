@@ -95,7 +95,7 @@ class Justread_Dashboard {
 	 */
 	public function footer_text() {
 		// Translators: theme name and theme slug.
-		echo wp_kses_post( sprintf( __( 'Please rate <strong>%1$s</strong> <a href="https://wordpress.org/support/theme/%2$s/reviews/" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href="https://wordpress.org/support/theme/%2$s/reviews/" target="_blank">WordPress.org</a> to help us spread the word. Thank you from WP Auto Listings!', 'justread' ), $this->theme->name, $this->slug ) );
+		echo wp_kses_post( sprintf( __( 'Please rate <strong>%1$s</strong> <a href="https://wordpress.org/support/theme/%2$s/reviews/" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> on <a href="https://wordpress.org/support/theme/%2$s/reviews/" target="_blank">WordPress.org</a> to help us spread the word. Thank you from GretaThemes!', 'justread' ), $this->theme->name, $this->slug ) );
 	}
 
 	/**
@@ -164,7 +164,7 @@ class Justread_Dashboard {
 	/**
 	 * Check if Jetpack is recommended
 	 */
-	public function jetpack_is_recommended() {
+	public function justread_jetpack_is_recommended() {
 		$plugins = justread_required_plugins();
 		foreach ( $plugins as $plugin ) {
 			if ( 'jetpack' === $plugin['slug'] ) {
