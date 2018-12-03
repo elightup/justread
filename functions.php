@@ -100,6 +100,9 @@ if ( ! function_exists( 'justread_setup' ) ) :
 
 		// Add support for post formats.
 		add_theme_support( 'post-formats', array( 'quote' ) );
+
+		// Support Gutenberg.
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'justread_setup' );
@@ -112,7 +115,7 @@ add_action( 'after_setup_theme', 'justread_setup' );
  * @global int $content_width
  */
 function justread_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'justread_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'justread_content_width', 960 );
 }
 add_action( 'after_setup_theme', 'justread_content_width', 0 );
 
@@ -211,3 +214,4 @@ if ( is_admin() ) {
 require get_template_directory() . '/inc/customizer-pro/class-justread-customizer-pro.php';
 $customizer_pro = new Justread_Customizer_Pro();
 $customizer_pro->init();
+

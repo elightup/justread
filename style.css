@@ -473,7 +473,8 @@ thead th {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-.button, button, .site-main #infinite-handle span button,
+.button,
+.wp-block-button__link, button, .site-main #infinite-handle span button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -494,6 +495,7 @@ input[type="submit"] {
 }
 
 .button:hover,
+.wp-block-button__link:hover,
 button:hover,
 .site-main #infinite-handle span button:hover,
 input[type="button"]:hover,
@@ -1365,6 +1367,7 @@ a.page-numbers:hover {
 
 .hfeed.error404 .site-content {
 	max-width: 58.5rem;
+	padding: 2rem;
 }
 
 .hfeed .format-quote blockquote {
@@ -1832,6 +1835,37 @@ a.page-numbers:hover {
 	font-size: 0.875rem;
 	font-weight: bold;
 	color: #6f8590;
+}
+
+/*--------------------------------------------------------------
+## Gutenberg
+--------------------------------------------------------------*/
+.entry-content .alignwide, .entry-content .alignfull {
+	margin-left: -8rem;
+	width: calc(100% + 16rem);
+	max-width: calc(100% + 16rem);
+}
+
+@media (max-width: 767px) {
+	.entry-content .alignwide, .entry-content .alignfull {
+		margin-left: -4rem;
+		width: calc(100% + 8rem);
+		max-width: calc(100% + 8rem);
+	}
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+	padding: 1em 0 0 2.5em;
+	margin: 0 0 1.6em;
+}
+
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
+	font-size: 18px;
+	text-align: left;
 }
 
 /* Footer */
