@@ -203,7 +203,9 @@
 		margin: 0 0 8px;
 		word-wrap: break-word;
 		@include font-size(1.8);
-
+		@media (max-width: 959px) {
+			padding: 0 10px;
+		}
 		@media (min-width: 768px) {
 			@include font-size(2.4);
 		}

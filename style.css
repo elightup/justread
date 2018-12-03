@@ -1470,6 +1470,13 @@ a.page-numbers:hover {
 	font-size: 1.8rem;
 }
 
+@media (max-width: 959px) {
+	.page .entry-title,
+	.single .entry-title {
+		padding: 0 10px;
+	}
+}
+
 @media (min-width: 768px) {
 	.page .entry-title,
 	.single .entry-title {
