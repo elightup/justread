@@ -164,7 +164,7 @@ class Justread_Dashboard {
 	/**
 	 * Check if Jetpack is recommended
 	 */
-	public function justread_jetpack_is_recommended() {
+	public function jetpack_is_recommended() {
 		$plugins = justread_required_plugins();
 		foreach ( $plugins as $plugin ) {
 			if ( 'jetpack' === $plugin['slug'] ) {

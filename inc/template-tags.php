@@ -76,7 +76,7 @@ function justread_posted_on_single() {
 			sprintf(
 				wp_kses(
 					/* translators: %s: post title */
-					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', '_s' ),
+					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'justread' ),
 					array(
 						'span' => array(
 							'class' => array(),

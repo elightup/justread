@@ -17,8 +17,7 @@
  * @uses justread_header_style()
  */
 function justread_custom_header_setup() {
-	add_theme_support(
-		'custom-header',
+	add_theme_support( 'custom-header',
 		apply_filters(
 			'justread_custom_header_args',
 			array(

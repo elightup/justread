@@ -17,7 +17,7 @@ $actions = $this->recommended_plugins_action();
 				<a class="button" href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins&plugin_status=install' ) ); ?>"><?php echo esc_html( $actions['button_text'] ); ?></a>
 			<?php endif; ?>
 
-			<?php if ( $this->justread_jetpack_is_recommended() ) : ?>
+			<?php if ( $this->jetpack_is_recommended() ) : ?>
 				<h3><?php esc_html_e( 'Connect Your Site To Jetpack', 'justread' ); ?></h3>
 				<p>
 					<?php
