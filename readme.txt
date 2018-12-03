@@ -40,6 +40,10 @@ Sticky Sidebar JavaScript Plugin.
 - License: https://github.com/abouolia/sticky-sidebar/blob/master/LICENSE.md
 - Source: https://abouolia.github.io/sticky-sidebar/
 
+skip-link-focus-fix.js.
+- License: This script is included in underscore starter theme and using GNU license
+- Source: https://github.com/Automattic/_s/blob/master/LICENSE
+
 Images used in the screenshot:
 - https://pixabay.com/en/notebook-work-girl-computer-woman-2386034/
 - https://pixabay.com/en/table-desk-notebook-potted-plant-869379/
