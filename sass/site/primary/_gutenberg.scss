@@ -1,27 +1,39 @@
-.entry-content .alignwide, .entry-content .alignfull {
-    margin-left: -8rem;
-    width: calc(100% + 16rem);
-    max-width: calc(100% + 16rem);
+@media (min-width: 768px) {
+	.entry-content .alignfull {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		width: auto;
+		max-width: 1000%;
+		iframe {
+			width: 100%;
+		}
+	}
 }
 
-@media (max-width: 767px) {
-    .entry-content .alignwide, .entry-content .alignfull {
-        margin-left: -4rem;
-        width: calc(100% + 8rem);
-        max-width: calc(100% + 8rem);
-    }
+.entry-content .alignwide {
+	margin-left: -8rem;
+	width: calc(100% + 16rem);
+	max-width: calc(100% + 16rem);
+}
+
+@media (max-width: 1023px) {
+	.entry-content .alignwide, .entry-content .alignfull {
+		margin-left: -2rem;
+		width: calc(100% + 4rem);
+		max-width: calc(100% + 4rem);
+	}
 }
 
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
-    padding: 1em 0 0 2.5em;
-    margin: 0 0 1.6em;
+	padding: 1em 0 0 2.5em;
+	margin: 0 0 1.6em;
 }
 
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer,
 .wp-block-quote.is-style-large cite,
 .wp-block-quote.is-style-large footer {
-    font-size: 18px;
-    text-align: left;
+	font-size: 18px;
+	text-align: left;
 }
