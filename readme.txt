@@ -20,7 +20,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Justread WordPress Theme, Copyright 2017 GretaThemes
+Justread WordPress Theme, Copyright 2019 GretaThemes
 Justread is distributed under the terms of the GNU General Public License v3
 
 Unless otherwise specified, all Images are self shot by GretaThemes
@@ -44,15 +44,19 @@ skip-link-focus-fix.js.
 - License: This script is included in underscore starter theme and using GNU license
 - Source: https://github.com/Automattic/_s/blob/master/LICENSE
 
-Images used in the screenshot:
-- https://pixabay.com/en/notebook-work-girl-computer-woman-2386034/
-- https://pixabay.com/en/table-desk-notebook-potted-plant-869379/
-- https://pixabay.com/en/laptop-coffee-arm-desktop-notebook-1205256/
-- https://pixabay.com/en/light-office-computer-business-300431/
-- https://pixabay.com/en/gray-computer-mobile-2158653/
-- https://pixabay.com/en/smartphone-mobile-laptop-computer-925758/
-- https://pixabay.com/en/desk-computer-modern-keyboard-1140699/
-- https://pixabay.com/en/apple-smartphone-desk-laptop-1282241/
+TGM Plugin Activation, Copyright TGMPA
+- License: GNU General Public License v2.0
+- Source : https://github.com/TGMPA/TGM-Plugin-Activation/blob/develop/LICENSE.md
+
+Screenshot Image, Copyright StockSnap
+License    : CC0 1.0 Universal (CC0 1.0)
+License URL: https://stocksnap.io/license
+Source:
+- https://stocksnap.io/photo/R5RP4AHWI0
+- https://stocksnap.io/photo/KIJQ4DNA7K
+- https://stocksnap.io/photo/AQNKPDGKR8
+- https://stocksnap.io/photo/0KAT80KW5F
+- https://stocksnap.io/photo/70JMTNDBJI
 
 Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
