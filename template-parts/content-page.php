@@ -17,7 +17,14 @@
 	<div class="entry-body">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-media">
-				<?php the_post_thumbnail( 'full', array( 'class' => 'singular-thumbnail' ) ); ?>
+				<?php
+				the_post_thumbnail(
+					'full',
+					array(
+						'class' => 'singular-thumbnail',
+					)
+				);
+				?>
 			</div>
 		<?php endif; ?>
 		<div class="entry-content">

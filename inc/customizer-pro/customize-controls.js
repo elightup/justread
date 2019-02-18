@@ -1,3 +1,9 @@
+/**
+ * Script for theme dashboard.
+ *
+ * @package Justread.
+ */
+
 ( function( api ) {
 
 	// Extends our custom "gt-go-pro" section.

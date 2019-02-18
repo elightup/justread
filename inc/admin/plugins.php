@@ -29,8 +29,8 @@ function justread_register_required_plugins() {
 function justread_required_plugins() {
 	return array(
 		array(
-			'name'     => esc_html__( 'Jetpack', 'justread' ),
-			'slug'     => 'jetpack',
+			'name' => esc_html__( 'Jetpack', 'justread' ),
+			'slug' => 'jetpack',
 		),
 		array(
 			'name' => esc_html__( 'One click demo import', 'justread' ),

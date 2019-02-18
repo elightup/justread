@@ -1,3 +1,9 @@
+/**
+ * Dashboard script.
+ *
+ * @package Justread.
+ */
+
 ( function ( $ ) {
 	'use strict';
 

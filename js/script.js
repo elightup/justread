@@ -1,3 +1,9 @@
+/**
+ * Theme main script.
+ *
+ * @package Justread.
+ */
+
 ( function( document, window, undefined ) {
 	var form = document.getElementById( 'form-wrapper' ),
 		toggle = document.querySelector( '.search-toggle' ),
@@ -34,6 +40,5 @@
 				topSpacing: adminBarHeight
 			} );
 	}
-
 
 } )( document, window );
