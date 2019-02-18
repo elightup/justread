@@ -21,7 +21,7 @@ License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Justread WordPress Theme, Copyright 2019 GretaThemes
-Justread is distributed under the terms of the GNU General Public License v3
+Justread is distributed under the terms of the GNU GPL
 
 Unless otherwise specified, all Images are self shot by GretaThemes
 Copyright: GretaThemes, gretathemes.com
