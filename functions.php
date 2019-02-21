@@ -98,6 +98,9 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		// Add theme support for editor style.
 		add_editor_style();
 
+		// Load regular editor styles into the new block-based editor.
+		add_theme_support( 'editor-styles' );
+
 		// Add support for post formats.
 		add_theme_support( 'post-formats', array( 'quote' ) );
 
@@ -145,9 +148,9 @@ add_action( 'widgets_init', 'justread_widgets_init' );
 function justread_scripts() {
 	wp_enqueue_style( 'justread-style', get_stylesheet_uri(), array(), '1.0.0' );
 
-	wp_enqueue_script( 'justread-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'justread-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0.0', true );
 
-	wp_enqueue_script( 'justread-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'justread-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0.0', true );
 
 	// Scripts for sticky sharing icons. Applied only for single posts and icon style.
 	if ( justread_is_sharing_icons_enabled() ) {

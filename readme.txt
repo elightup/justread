@@ -11,6 +11,11 @@ Justread is a perfect choice for people who want a fast and clean website. Focus
 Built on the latest technology of WordPress, Justread is lightweight, fast and optimized for all mobile phones.
 
 == Installation ==
+In order to make the theme works properly, you need to install the Recommended plugins first. Simply go to the Dashboard -> Justread -> Implement Recommended Actions. Then click on Install the Recommended plugins.
+
+After installing Recommended plugins, which includes Jetpack, you need to connect to WordPress.com to use it (it requires you to create an account on wordpress.com – which is free). If you don’t want to create an account on wordpress.com, you can enable the Jetpack development mode.
+
+Finally, go to Dashboard -> Appearance -> Import Demo Data to make your website exactly the same as our demo.
 
 Please go to http://gretathemes.com/docs/justread/
 
@@ -57,6 +62,11 @@ Source:
 - https://stocksnap.io/photo/AQNKPDGKR8
 - https://stocksnap.io/photo/0KAT80KW5F
 - https://stocksnap.io/photo/70JMTNDBJI
+
+Dashboard Image, Copyright PurePNG
+License: CC0 1.0 Universal (CC0 1.0)
+Source : https://purepng.com/page/terms-of-service
+https://purepng.com/photo/11167/clipart-paper-plane
 
 Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
