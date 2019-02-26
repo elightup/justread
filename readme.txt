@@ -67,8 +67,18 @@ Source:
 
 Dashboard Image, Copyright PurePNG
 License: CC0 1.0 Universal (CC0 1.0)
-Source : https://purepng.com/page/terms-of-service
-https://purepng.com/photo/11167/clipart-paper-plane
+License URL : https://purepng.com/page/terms-of-service
+Source :https://purepng.com/photo/11167/clipart-paper-plane
+
+SVG images, Copyright Font-Awesome-SVG-PNG
+License: MIT license
+License URL: https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/LICENSE
+Source:
+- https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/white/svg/angle-down.svg
+- https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/white/svg/angle-left.svg
+- https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/white/svg/angle-right.svg
+- https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/white/svg/bookmark.svg
+- https://github.com/encharm/Font-Awesome-SVG-PNG/blob/master/white/svg/search.svg
 
 Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.

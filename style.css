@@ -591,8 +591,7 @@ a:hover {
 	z-index: 99999;
 	background: #fff;
 	width: 220px;
-	-webkit-transform: translate3d(0, 10px, 0);
-	        transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
 	opacity: 0;
 	visibility: hidden;
 	transition: all .3s;
@@ -625,8 +624,7 @@ a:hover {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	-webkit-transform: translate3d(0, 0, 0);
-	        transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 	opacity: 1;
 	visibility: visible;
 }
@@ -744,8 +742,7 @@ li .main-navigation .current_page_item > a, li
 	opacity: 1;
 	position: static;
 	float: none;
-	-webkit-transform: none;
-	        transform: none;
+	transform: none;
 	box-shadow: none;
 }
 
@@ -1134,21 +1131,6 @@ a.page-numbers:hover {
 	outline: none;
 }
 
-.form-wrapper .search-field::-webkit-input-placeholder {
-	color: #fff;
-	opacity: .3;
-}
-
-.form-wrapper .search-field:-ms-input-placeholder {
-	color: #fff;
-	opacity: .3;
-}
-
-.form-wrapper .search-field::-ms-input-placeholder {
-	color: #fff;
-	opacity: .3;
-}
-
 .form-wrapper .search-field::placeholder {
 	color: #fff;
 	opacity: .3;
@@ -1287,8 +1269,7 @@ a.page-numbers:hover {
 }
 
 .card:hover .card__media img {
-	-webkit-transform: scale(1.1);
-	        transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .card__body {
@@ -1377,6 +1358,7 @@ a.page-numbers:hover {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
+	fill: #c2ccd0;
 }
 
 /* Archive page */
@@ -1721,11 +1703,9 @@ a.page-numbers:hover {
 		margin-right: 0;
 	}
 	.sticky-sharing .sharedaddy .sh-sharing {
-		-webkit-transform: translate(0, 0);
-		        transform: translate(0, 0);
+		transform: translate(0, 0);
 		/* For browsers don't support translate3d. */
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -2103,3 +2083,5 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*# sourceMappingURL=style.css.map */
