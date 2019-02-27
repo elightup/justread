@@ -55,6 +55,10 @@ TGM Plugin Activation, Copyright TGMPA
 - License: GNU General Public License v2.0
 - Source : https://github.com/TGMPA/TGM-Plugin-Activation/blob/develop/LICENSE.md
 
+Customizer Pro, Copyright Justin Tadlock
+- License: GNU General Public License v2.0
+- Source : https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
+
 Screenshot Image, Copyright StockSnap
 License    : CC0 1.0 Universal (CC0 1.0)
 License URL: https://stocksnap.io/license

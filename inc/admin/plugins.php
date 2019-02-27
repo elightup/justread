@@ -36,5 +36,9 @@ function justread_required_plugins() {
 			'name' => esc_html__( 'One click demo import', 'justread' ),
 			'slug' => 'one-click-demo-import',
 		),
+		array(
+			'name' => esc_html__( 'Slim SEO', 'justread' ),
+			'slug' => 'slim-seo',
+		),
 	);
 }
