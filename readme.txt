@@ -23,9 +23,9 @@ Please go to http://gretathemes.com/docs/justread/
 
 == License ==
 
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License Version 3.
-License: GNU General Public License v3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License v2 or later.
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Justread WordPress Theme, Copyright 2019 GretaThemes
 Justread is distributed under the terms of the GNU GPL
@@ -67,8 +67,8 @@ Source:
 
 Dashboard Image, Copyright PurePNG
 License: CC0 1.0 Universal (CC0 1.0)
-License URL : https://purepng.com/page/terms-of-service
-Source :https://purepng.com/photo/11167/clipart-paper-plane
+License URL: https://purepng.com/page/terms-of-service
+Source: https://purepng.com/photo/11167/clipart-paper-plane
 
 SVG images, Copyright Font-Awesome-SVG-PNG
 License: MIT license
@@ -82,10 +82,6 @@ Source:
 
 Justread is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Justread is Licensed under the GNU GPL 3 license
-http://gretathemes.com/
-
 
 == Changelog ==
 
