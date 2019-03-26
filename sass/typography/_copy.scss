@@ -56,7 +56,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(.9375);
+	font-size: 0.84090145em;
 }
 
 abbr, acronym {

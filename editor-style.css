@@ -49,6 +49,7 @@ h6 {
 
 p {
 	margin: 0 0 1.6em;
+	font-size: 20px;
 }
 
 p:last-child {
@@ -106,8 +107,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 0.84090145em;
 }
 
 abbr, acronym {
