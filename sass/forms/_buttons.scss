@@ -20,8 +20,22 @@ input[type="submit"] {
 
 	&:hover {
 		opacity: .8;
+		text-decoration: none;
 	}
 }
 .button:hover {
 	text-decoration: none;
+}
+
+.wp-block-button.is-style-outline a{
+	border: 2px solid #06c;
+	background: transparent;
+	color: #06c;
+	border-radius: 3px;
+	transition: all 0.3s;
+}
+
+.wp-block-button.is-style-outline a:hover {
+	opacity: .8;
+	text-decoration: unset;
 }

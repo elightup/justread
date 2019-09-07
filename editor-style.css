@@ -152,7 +152,6 @@ figure.wp-block-pullquote {
 .block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link:hover,
 .wp-block-button.is-style-outline .block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link:hover {
 	opacity: .8;
-	text-decoration: underline;
 }
 
 .wp-block-button.is-style-outline .block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link {

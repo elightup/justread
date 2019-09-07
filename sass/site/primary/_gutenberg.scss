@@ -1,9 +1,9 @@
 @media (min-width: 768px) {
 	.entry-content .alignfull {
+		margin-left: calc(50% - 49.5vw);
+		margin-right: calc(50% - 49.4vw);
 		width: auto;
-		width: calc(100% + 16rem);
-		max-width: calc(100% + 16rem);
-		margin-left: -8rem;
+		max-width: 1000%;
 		iframe {
 			width: 100%;
 		}
@@ -34,6 +34,6 @@
 .wp-block-quote.is-large footer,
 .wp-block-quote.is-style-large cite,
 .wp-block-quote.is-style-large footer {
-	font-size: 18px;
+	font-size: 14px;
 	text-align: left;
 }

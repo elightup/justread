@@ -45,25 +45,13 @@ figure {
 		p {
 			font-size: 24px;
 		}
+
+		cite {
+			font-size: 14px;
+			text-align: left;
+			color: #6f8590;
+		}
 	}
-
-	&.alignwide,
-	&.alignfull {
-		padding: 0 128px;
-	}
-}
-
-.wp-block-button.is-style-outline a{
-	border: 2px solid #06c;
-	background: transparent;
-	color: #06c;
-	border-radius: 3px;
-	transition: all 0.3s;
-}
-
-.wp-block-button.is-style-outline a:hover {
-	opacity: .8;
-	text-decoration: underline;
 }
 
 figure.wp-block-image.alignleft {
