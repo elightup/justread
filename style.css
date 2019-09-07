@@ -480,7 +480,7 @@ thead th {
 }
 
 .wp-block-pullquote.alignwide, .wp-block-pullquote.alignfull {
-	padding: 0px 128px;
+	padding: 0 128px;
 }
 
 .wp-block-button.is-style-outline a {
@@ -494,6 +494,14 @@ thead th {
 .wp-block-button.is-style-outline a:hover {
 	opacity: .8;
 	text-decoration: underline;
+}
+
+figure.wp-block-image.alignleft {
+	margin-right: 1.5em;
+}
+
+figure.wp-block-image.alignright {
+	margin-left: 1.5em;
 }
 
 /*--------------------------------------------------------------
