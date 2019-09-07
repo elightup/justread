@@ -1,9 +1,9 @@
 @media (min-width: 768px) {
 	.entry-content .alignfull {
-		margin-left: calc(50% - 50vw);
-		margin-right: calc(50% - 50vw);
 		width: auto;
-		max-width: 1000%;
+		width: calc(100% + 16rem);
+		max-width: calc(100% + 16rem);
+		margin-left: -8rem;
 		iframe {
 			width: 100%;
 		}

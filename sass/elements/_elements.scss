@@ -17,6 +17,7 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.6em;
+	clear: both;
 }
 
 @import "lists";
@@ -31,3 +32,36 @@ figure {
 }
 
 @import "tables";
+
+.wp-block-pullquote {
+	&.aligncenter,
+	&.alignwide,
+	&.alignfull,
+	&.alignleft,
+	&.alignright {
+		text-align: left;
+		padding: 0px;
+
+		p {
+			font-size: 24px;
+		}
+	}
+
+	&.alignwide,
+	&.alignfull {
+		padding: 0px 128px;
+	}
+}
+
+.wp-block-button.is-style-outline a{
+	border: 2px solid #06c;
+	background: transparent;
+	color: #06c;
+	border-radius: 3px;
+	transition: all 0.3s;
+}
+
+.wp-block-button.is-style-outline a:hover {
+	opacity: .8;
+	text-decoration: underline;
+}

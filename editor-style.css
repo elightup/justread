@@ -50,19 +50,30 @@ h6 {
 p {
 	margin: 0 0 1.6em;
 	font-size: 20px;
+	color: #263238;
 }
 
-p:last-child {
-	margin-bottom: 0;
+.editor-block-list__block-edit.block-editor-block-list__block-edit a{
+	text-decoration: none;
+	color: #06c;
+	transition: all 0.3s;
+}
+.editor-block-list__block-edit.block-editor-block-list__block-edit a:hover{
+	text-decoration: underline;
+}
+.wp-block-categories {
+	text-align: left;
 }
 
-blockquote {
+blockquote,
+blockquote.wp-block-quote.is-large {
 	font-size: 1.2em;
 	font-style: italic;
 	border-top: 4px solid currentColor;
 	padding: 1em 0 0 2.5em;
 	margin: 0 0 1.6em;
 	position: relative;
+	font-size: 24px;
 }
 
 blockquote:before {
@@ -74,20 +85,82 @@ blockquote:before {
 	font-style: normal;
 }
 
-blockquote cite {
+figure.wp-block-pullquote {
+    padding: 0px;
+    border: none;
+    text-align: left;
+    font-size: 24px;
+}
+
+.wp-block-quote p,
+.wp-block-quote.is-large p,
+.wp-block-pullquote.aligncenter p,
+.wp-block-pullquote.alignwide p,
+.wp-block-pullquote.alignfull p{
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=left] .block-editor-block-list__block-edit,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right]>.block-editor-block-list__block-edit {
+	width: 305px;
+}
+
+.block-editor-block-list__block[data-type="core/pullquote"][data-align=left] .block-editor-rich-text p,
+.block-editor-block-list__block[data-type="core/pullquote"][data-align=right] .block-editor-rich-text p {
+	font-size: 24px;
+}
+
+.block-editor-rich-text__editable.editor-rich-text__editable.wp-block-quote__citation {
 	display: block;
 	margin-top: .8em;
 	font-size: 14px;
-	font-size: 0.875rem;
 	text-transform: uppercase;
 	font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
 	font-style: normal;
 	color: #6f8590;
+	text-transform: uppercase;
 }
 
-blockquote cite:before {
+.wp-block-quote__citation:before,
+.wp-block-pullquote__citation:before {
 	content: '\2014';
 	margin-right: .5rem;
+}
+
+.wp-block-quote {
+    border-left: none;
+}
+
+.block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link {
+	display: inline-block;
+    border: 1px solid;
+    border-color: #06c;
+    border-radius: 3px;
+    background: #06c;
+    color: #fff;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1;
+    padding: .75rem 1.25rem;
+    transition: all .3s ease;
+    font-family: -apple-system,BlinkMacSystemFont,"avenir next",avenir,"helvetica neue",helvetica,ubuntu,roboto,noto,"segoe ui",arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link:hover,
+.wp-block-button.is-style-outline .block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link:hover {
+	opacity: .8;
+	text-decoration: underline;
+}
+
+.wp-block-button.is-style-outline .block-editor-rich-text__editable.editor-rich-text__editable.wp-block-button__link {
+	border: 2px solid #06c;
+	background: transparent;
+	color: #06c;
+	border-radius: 3px;
+	transition: all 0.3s;
 }
 
 address {
@@ -103,6 +176,7 @@ pre {
 	overflow: auto;
 	padding: 2em;
 	color: #e3e6e8;
+	white-space: nowrap!important;
 }
 
 code, kbd, tt, var {
@@ -148,6 +222,11 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.6em;
+	clear: both;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 100%;
 }
 
 ul, ol {
@@ -188,6 +267,12 @@ table {
 
 th, td {
 	padding: .5rem .75rem;
+	border: none;
+	border-bottom: 1px solid rgba(38, 50, 56, 0.1);
+}
+
+.wp-block-table__cell-content {
+	padding: 0;
 }
 
 th:first-child, td:first-child {
