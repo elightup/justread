@@ -218,3 +218,11 @@ require get_template_directory() . '/inc/customizer-pro/class-justread-customize
 $customizer_pro = new Justread_Customizer_Pro();
 $customizer_pro->init();
 
+/**
+ * Style gutenberg
+ */
+function justread_style_editor_gutenberg() {
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style( 'style-editor', get_theme_file_uri( '/editor-gutenberg.css' ), false );
+}
+add_action( 'enqueue_block_editor_assets', 'justread_style_editor_gutenberg' );
