@@ -40,7 +40,8 @@ figure {
 	&.alignleft,
 	&.alignright {
 		text-align: left;
-		padding: 0px;
+		padding: 1em 0 0 2.5em;
+		background-color: #fff
 
 		p {
 			font-size: 24px;
@@ -55,9 +56,11 @@ figure {
 }
 
 figure.wp-block-image.alignleft {
+	padding: 1em 0 0 2.5em;
 	margin-right: 1.5em;
 }
 
 figure.wp-block-image.alignright {
+	padding: 1em 0 0 2.5em;
 	margin-left: 1.5em;
 }

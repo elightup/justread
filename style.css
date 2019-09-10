@@ -472,11 +472,9 @@ thead th {
 
 .wp-block-pullquote.aligncenter, .wp-block-pullquote.alignwide, .wp-block-pullquote.alignfull, .wp-block-pullquote.alignleft, .wp-block-pullquote.alignright {
 	text-align: left;
-	padding: 0px;
-}
-
-.wp-block-pullquote.aligncenter p, .wp-block-pullquote.alignwide p, .wp-block-pullquote.alignfull p, .wp-block-pullquote.alignleft p, .wp-block-pullquote.alignright p {
-	font-size: 24px;
+	padding: 1em 0 0 2.5em;
+	background-color: #fff p;
+	background-color-font-size: 24px;
 }
 
 .wp-block-pullquote.aligncenter cite, .wp-block-pullquote.alignwide cite, .wp-block-pullquote.alignfull cite, .wp-block-pullquote.alignleft cite, .wp-block-pullquote.alignright cite {
@@ -486,10 +484,12 @@ thead th {
 }
 
 figure.wp-block-image.alignleft {
+	padding: 1em 0 0 2.5em;
 	margin-right: 1.5em;
 }
 
 figure.wp-block-image.alignright {
+	padding: 1em 0 0 2.5em;
 	margin-left: 1.5em;
 }
 
@@ -1166,6 +1166,26 @@ a.page-numbers:hover {
 
 .form-wrapper .search-field:focus {
 	outline: none;
+}
+
+.form-wrapper .search-field::-webkit-input-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
+.form-wrapper .search-field::-moz-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
+.form-wrapper .search-field:-ms-input-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
+.form-wrapper .search-field::-ms-input-placeholder {
+	color: #fff;
+	opacity: .3;
 }
 
 .form-wrapper .search-field::placeholder {
@@ -1891,13 +1911,16 @@ a.page-numbers:hover {
 		margin-right: calc(50% - 49.4vw);
 		width: auto;
 		max-width: 1000%;
+		background-color: #fff;
+		padding-bottom: 24px;
 	}
 	.entry-content .alignfull iframe {
 		width: 100%;
 	}
 }
 
-.entry-content .alignwide {
+.entry-content .alignwide,
+.entry-content .is-large {
 	margin-left: -8rem;
 	width: calc(100% + 16rem);
 	max-width: calc(100% + 16rem);
@@ -1914,7 +1937,6 @@ a.page-numbers:hover {
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
 	padding: 1em 0 0 2.5em;
-	margin: 0 0 1.6em;
 }
 
 .wp-block-quote.is-large cite,
@@ -2120,5 +2142,3 @@ object {
 .gallery-caption {
 	display: block;
 }
-
-/*# sourceMappingURL=style.css.map */
