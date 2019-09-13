@@ -230,4 +230,5 @@ add_action( 'enqueue_block_editor_assets', 'justread_style_editor_gutenberg' );
 /**
  * add dashboardwidget Meta Box
  */
-require get_template_directory() . '/inc/dashboardWidget.php';
+require get_template_directory() . '/inc/dashboard-widget.php';
+new Justread_Dashboard_Widget();
