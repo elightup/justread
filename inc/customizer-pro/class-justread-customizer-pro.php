@@ -59,9 +59,9 @@ final class Justread_Customizer_Pro {
 				'justread',
 				array(
 					'doc_title' => esc_html__( 'Need Some Help?', 'justread' ),
-					'doc_text'  => esc_html__( 'Documentation', 'justread' ),
+					'doc_text'  => esc_html__( 'Need help setting up your site?', 'justread' ),
 					'doc_url'   => esc_url( "https://gretathemes.com/docs/{$this->slug}/{$this->utm}" ),
-					'priority'  => 99999999,
+					'priority'  => 0,
 				)
 			)
 		);
