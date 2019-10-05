@@ -8,7 +8,7 @@ Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: justread
-Tags: one-column, grid-layout, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, threaded-comments, translation-ready, blog, news
+Tags: blog, news, food-and-drink, , grid-layout, one-column, three-columns, custom-background, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -628,7 +628,8 @@ a:hover {
 	z-index: 99999;
 	background: #fff;
 	width: 220px;
-	transform: translate3d(0, 10px, 0);
+	-webkit-transform: translate3d(0, 10px, 0);
+	        transform: translate3d(0, 10px, 0);
 	opacity: 0;
 	visibility: hidden;
 	transition: all .3s;
@@ -661,7 +662,8 @@ a:hover {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
 	opacity: 1;
 	visibility: visible;
 }
@@ -779,7 +781,8 @@ li .main-navigation .current_page_item > a, li
 	opacity: 1;
 	position: static;
 	float: none;
-	transform: none;
+	-webkit-transform: none;
+	        transform: none;
 	box-shadow: none;
 }
 
@@ -1173,11 +1176,6 @@ a.page-numbers:hover {
 	opacity: .3;
 }
 
-.form-wrapper .search-field::-moz-placeholder {
-	color: #fff;
-	opacity: .3;
-}
-
 .form-wrapper .search-field:-ms-input-placeholder {
 	color: #fff;
 	opacity: .3;
@@ -1326,7 +1324,8 @@ a.page-numbers:hover {
 }
 
 .card:hover .card__media img {
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 .card__body {
@@ -1760,9 +1759,11 @@ a.page-numbers:hover {
 		margin-right: 0;
 	}
 	.sticky-sharing .sharedaddy .sh-sharing {
-		transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
+		        transform: translate(0, 0);
 		/* For browsers don't support translate3d. */
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 }
 
