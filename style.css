@@ -4,7 +4,7 @@ Theme URI: https://gretathemes.com/wordpress-themes/justread/
 Author: GretaThemes
 Author URI: https://gretathemes.com
 Description: Justread is a clean and modern WordPress theme that focuses on reading experience. Justread has a grid layout with single column content. The theme uses system fonts and SVG for fast loading. Enjoy reading long content with comfortability.
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: justread
@@ -628,8 +628,7 @@ a:hover {
 	z-index: 99999;
 	background: #fff;
 	width: 220px;
-	-webkit-transform: translate3d(0, 10px, 0);
-	        transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
 	opacity: 0;
 	visibility: hidden;
 	transition: all .3s;
@@ -662,8 +661,7 @@ a:hover {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	-webkit-transform: translate3d(0, 0, 0);
-	        transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 	opacity: 1;
 	visibility: visible;
 }
@@ -781,8 +779,7 @@ li .main-navigation .current_page_item > a, li
 	opacity: 1;
 	position: static;
 	float: none;
-	-webkit-transform: none;
-	        transform: none;
+	transform: none;
 	box-shadow: none;
 }
 
@@ -1176,6 +1173,11 @@ a.page-numbers:hover {
 	opacity: .3;
 }
 
+.form-wrapper .search-field::-moz-placeholder {
+	color: #fff;
+	opacity: .3;
+}
+
 .form-wrapper .search-field:-ms-input-placeholder {
 	color: #fff;
 	opacity: .3;
@@ -1324,8 +1326,7 @@ a.page-numbers:hover {
 }
 
 .card:hover .card__media img {
-	-webkit-transform: scale(1.1);
-	        transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .card__body {
@@ -1759,11 +1760,9 @@ a.page-numbers:hover {
 		margin-right: 0;
 	}
 	.sticky-sharing .sharedaddy .sh-sharing {
-		-webkit-transform: translate(0, 0);
-		        transform: translate(0, 0);
+		transform: translate(0, 0);
 		/* For browsers don't support translate3d. */
-		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 }
 
