@@ -136,39 +136,3 @@ function justread_tag_cloud_args( $args ) {
 }
 
 add_filter( 'widget_tag_cloud_args', 'justread_tag_cloud_args' );
-
-/**
- * Demo files for importing.
- *
- * @return array List of demos configuration.
- */
-function justread_import_files() {
-	return array(
-		array(
-			'import_file_name'             => esc_html__( 'Demo', 'justread' ),
-			'local_import_file'            => get_template_directory() . '/demos/demo-content.xml',
-			'local_import_widget_file'     => get_template_directory() . '/demos/widgets.wie',
-			'local_import_customizer_file' => get_template_directory() . '/demos/customizer.dat',
-			'import_preview_image_url'     => get_template_directory_uri() . '/screenshot.jpg',
-		),
-	);
-}
-add_filter( 'pt-ocdi/import_files', 'justread_import_files' );
-
-/**
- * Setup the theme after importing demo.
- */
-function justread_after_import_setup() {
-	// Assign menus to their locations.
-	$header = get_term_by( 'slug', 'header', 'nav_menu' );
-	$social = get_term_by( 'slug', 'social', 'nav_menu' );
-	set_theme_mod(
-		'nav_menu_locations',
-		array(
-			'menu-1'              => $header->term_id,
-			'jetpack-social-menu' => $social->term_id,
-		)
-	);
-}
-add_action( 'pt-ocdi/after_import', 'justread_after_import_setup' );
-add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
