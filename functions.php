@@ -232,3 +232,12 @@ add_action( 'enqueue_block_editor_assets', 'justread_style_editor_gutenberg' );
  */
 require get_template_directory() . '/inc/dashboard-widget.php';
 new Justread_Dashboard_Widget();
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Shim for wp_body_open, ensuring backwards compatibility with versions of WordPress older than 5.2.
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
