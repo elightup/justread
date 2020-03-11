@@ -7,6 +7,20 @@
  * @package Justread
  */
 
+/**
+ * Determine whether it is an AMP response.
+ *
+ * This function is used as a "Conditional Tag" in WordPress. It can only be used at the `wp` action or later.
+ *
+ * @link https://developer.wordpress.org/themes/references/list-of-conditional-tags/
+ * @see is_amp_endpoint()
+ *
+ * @return bool Is AMP response.
+ */
+function justread_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
 if ( ! function_exists( 'justread_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -104,6 +118,25 @@ if ( ! function_exists( 'justread_setup' ) ) :
 		// Add support for post formats.
 		add_theme_support( 'post-formats', array( 'quote' ) );
 
+		// AMP.
+		add_theme_support(
+			'amp',
+			array(
+				'paired' => true,
+
+				/*
+				 * Configure mobile nav menu toggle, per <https://amp-wp.org/documentation/playbooks/toggling-hamburger-menus/>.
+				 * The configuration here takes the place of the custom script in navigation.js, porting the functionality
+				 * to use amp-bind instead; see <https://amp.dev/documentation/components/amp-bind/>.
+				 */
+				'nav_menu_toggle' => array(
+					'nav_container_id'           => 'site-navigation',
+					'nav_container_toggle_class' => 'toggled',
+					'menu_button_id'             => 'site-navigation-open',
+					// @todo It would be nice if the AMP_Nav_Menu_Toggle_Sanitizer had a body_toggle_class instead of needing to manually add a bound class in header.php.
+				),
+			)
+		);
 		// Support Gutenberg.
 		add_theme_support( 'align-wide' );
 	}
@@ -148,19 +181,18 @@ add_action( 'widgets_init', 'justread_widgets_init' );
 function justread_scripts() {
 	wp_enqueue_style( 'justread-style', get_stylesheet_uri(), array(), '1.0.0' );
 
-	wp_enqueue_script( 'justread-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0.0', true );
-
-	wp_enqueue_script( 'justread-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0.0', true );
-
 	// Scripts for sticky sharing icons. Applied only for single posts and icon style.
 	if ( justread_is_sharing_icons_enabled() ) {
 		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/js/sticky-sidebar.js', array(), '3.2.0', true );
 	}
 
-	wp_enqueue_script( 'justread', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if ( ! justread_is_amp() ) {
+		wp_enqueue_script( 'justread-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'justread-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'justread', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'justread_scripts' );

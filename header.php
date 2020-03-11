@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,12 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'justread' ); ?></a>
 
 	<div class="form-wrapper" id="form-wrapper">
-		<button class="search-close" id="search-close">&times;</button>
+		<button
+			class="search-close" id="search-close"
+			<?php if ( justread_is_amp() ) : ?>
+				on="tap:form-wrapper.toggleClass( class='is-visible', force=false )"
+			<?php endif; ?>
+		>&times;</button>
 		<?php get_search_form(); ?>
 	</div>
 
@@ -71,8 +76,13 @@
 				jetpack_social_menu();
 			}
 			?>
-			<button class="search-toggle" aria-controls="form-wrapper" aria-expanded="false"><?php echo justread_get_svg( array( 'icon' => 'search' ) ); // wpcs xss: ok. ?></button>
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread' ); ?></button>
+			<button
+				class="search-toggle" aria-controls="form-wrapper" aria-expanded="false"
+				<?php if ( justread_is_amp() ) : ?>
+					on="tap:form-wrapper.toggleClass( class='is-visible' )"
+				<?php endif; ?>
+			><?php echo justread_get_svg( array( 'icon' => 'search' ) ); // wpcs xss: ok. ?></button>
+			<button id="site-navigation-open" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'justread' ); ?></button>
 		</div>
 	</header><!-- #masthead -->
 
