@@ -267,18 +267,3 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 		do_action( 'wp_body_open' );
 	}
 }
-
-/**
- * Add amp_reader_themes
-*/
-add_filter( 'amp_reader_themes', function ( $reader_themes ) {
-	$reader_themes[] = [
-		'name' => 'Justread',
-		'slug' => 'Justread',
-		'preview_url' => 'https://demo.gretathemes.com/justread/',
-		'screenshot_url' => 'https://demo.gretathemes.com/justread/wp-content/themes/justread/screenshot.jpg',
-		'homepage' => 'https://gretathemes.com/wordpress-themes/justread/',
-		'description' => 'This is a non-core theme.',
-	];
-	return $reader_themes;
-} );
