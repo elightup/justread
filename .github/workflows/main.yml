@@ -7,11 +7,9 @@ jobs:
   call-workflow:
     uses: elightup/estar/.github/workflows/release.yml@master
     secrets:
-      DEMO_URL: ${{ secrets.DEMO_URL }}
-      DEMO_USER: ${{ secrets.DEMO_USER }}
-      DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
       SSH_KEY: ${{ secrets.SSH_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
       SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       SERVER_IP: ${{ secrets.SERVER_IP }}
       DOWNLOADS_DIR: ${{ secrets.DOWNLOADS_DIR }}
+      THEME_DIR: ${{ secrets.THEME_DIR }}
