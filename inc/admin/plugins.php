@@ -60,7 +60,7 @@ function justread_register_plugins( $plugins ) {
 		[
 			'name' => esc_html__( 'Falcon', 'justread' ),
 			'slug' => 'falcon',
-		],
+		]
 	];
 
 	return array_merge( $plugins, $theme_plugins );
