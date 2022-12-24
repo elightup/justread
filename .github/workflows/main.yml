@@ -4,19 +4,14 @@ on:
     branches:
       - master
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Create zip and upload
-        run: |
-          name=$(basename -s .git $(git config --get remote.origin.url))
-          git archive -o $name.zip --prefix=$name/ HEAD
-          rsync -e "ssh -o StrictHostKeyChecking=no" $name.zip ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }}:${{ secrets.DOWNLOADS_DIR }} 
+  call-workflow:
+    uses: elightup/estar/.github/workflows/release.yml@master
+    secrets:
+      DEMO_URL: ${{ secrets.DEMO_URL }}
+      DEMO_USER: ${{ secrets.DEMO_USER }}
+      DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
+      SSH_KEY: ${{ secrets.SSH_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+      SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      SERVER_IP: ${{ secrets.SERVER_IP }}
+      DOWNLOADS_DIR: ${{ secrets.DOWNLOADS_DIR }}
