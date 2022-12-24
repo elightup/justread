@@ -1,67 +1,35 @@
 <?php
 /**
  * Add required and recommended plugins.
- *
- * @package Justread
  */
 
 add_action( 'tgmpa_register', 'justread_register_required_plugins' );
-add_filter( 'justread/register_plugins', 'justread_register_plugins' );
+add_filter( 'ocdi/register_plugins', 'justread_register_ocdi_plugins' );
 
-/**
- * Register required plugins
- *
- * @since  1.0
- */
 function justread_register_required_plugins() {
-	$plugins = justread_required_plugins();
-
-	$config = [
+	tgmpa( justread_required_plugins(), [
 		'id'          => 'justread',
 		'has_notices' => true,
-	];
-
-	tgmpa( $plugins, $config );
+	] );
 }
 
-/**
- * List of required plugins
- */
+function justread_register_ocdi_plugins( $plugins ) {
+	return array_merge( $plugins, justread_required_plugins() );
+}
+
 function justread_required_plugins() {
 	return [
 		[
-			'name' => esc_html__( 'Jetpack', 'justread' ),
+			'name' => 'Jetpack',
 			'slug' => 'jetpack',
 		],
 		[
-			'name' => esc_html__( 'Slim SEO', 'justread' ),
+			'name' => 'Slim SEO',
 			'slug' => 'slim-seo',
 		],
 		[
-			'name' => esc_html__( 'Falcon', 'justread' ),
+			'name' => 'Falcon',
 			'slug' => 'falcon',
 		],
 	];
-}
-
-/**
- * List of recommended plugins in ocdi plugin
- */
-function justread_register_plugins( $plugins ) {
-	$theme_plugins = [
-		[
-			'name' => esc_html__( 'Jetpack', 'justread' ),
-			'slug' => 'jetpack',
-		],
-		[
-			'name' => esc_html__( 'Slim SEO', 'justread' ),
-			'slug' => 'slim-seo',
-		],
-		[
-			'name' => esc_html__( 'Falcon', 'justread' ),
-			'slug' => 'falcon',
-		]
-	];
-
-	return array_merge( $plugins, $theme_plugins );
 }
