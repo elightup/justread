@@ -62,6 +62,5 @@ function justread_register_plugins( $plugins ) {
 			'slug' => 'falcon',
 		]
 	];
-
 	return array_merge( $plugins, $theme_plugins );
 }
